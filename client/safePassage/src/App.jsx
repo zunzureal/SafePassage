@@ -8,12 +8,26 @@ function App() {
 
   return (
     <div>
-      <nav>
-        
-      </nav>
+      <div className="status">
+        <div className = "Profile">
+          <img src="" alt="" />
+        </div>
+        <p>Welcome</p>
+      <div className = "username">
+        <p className = "user"> </p>
+        <p className = "address"> </p>
+      </div>
+
+      </div>
       <h1>
-        Hello world
+        <button className = "visitor" hrel = "#"> Visitor </button>
       </h1>
+      <h2>
+        <button className = "delivery" hrel = "#"> Delivery </button>
+      </h2>
+      <h3>
+        <button className = "houseowner" hrel = "#"> House Owner </button >
+      </h3>
     </div>
   )
 }

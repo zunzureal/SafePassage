@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+@layer utilities{
+    .div{   
+        text-align: center;
+        align-content: center;
+    }
+}
+@layer utilities{
+    .status{
+        background: #e59292;
+        width: 500px;
+        height: 60px;
+        align-content: center;
+        padding: 15px;
+        transform: translateX(500px);
+    }
+}
+@layer utilities{
+    .status Profile{
+        position: absolute;
+    }
+}
+
+@layer utilities{
+    .welcome{
+        position: absolute;
+        align-content: center;
+        transform: translateX(20%);
+    }
+}
+@layer utilities{
+    .select {
+        text-align: center;
+        align-content: center;
+    }
+
+}
+
+@layer utilities{
+
+}

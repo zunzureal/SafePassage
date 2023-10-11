@@ -9,6 +9,17 @@
         box-sizing: border-box;
     }
 }
+@layer utilities{
+    .select{
+        border: 2px black  solid ;
+        width: 37%;
+        margin-left: 31.5%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(149, 149, 247);
+        overflow: auto;
+    }
+}
 
 @layer utilities{
     .div{   
@@ -19,34 +30,145 @@
 @layer utilities{
     .status{
         background: #e59292;
-        width: 500px;
-        height: 60px;
+        width: 300px;
+        height: 62px;
+        margin-top: 50px;
         align-content: center;
-        padding: 15px;
-        transform: translateX(500px);
+        padding: 10px;
+        transform: translateX(44.1%);
+        border-radius: 30px;
     }
 }
 @layer utilities{
     .status Profile{
-        position: absolute;
+        white-space: nowrap;
     }
 }
 
 @layer utilities{
     .welcome{
-        position: absolute;
-        align-content: center;
-        transform: translateX(20%);
+        font-size: 14px;
+        transform: translateX(30%);
+        margin-bottom: 50%;
     }
 }
+
 @layer utilities{
-    .select {
+    .visitor{
+        transform: translateX(207.5px);
+        background-color: #e59292;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
         text-align: center;
         align-content: center;
+        border-radius: 25px;
+        cursor: pointer;
     }
-
+}
+@layer utilities{   
+    .hover-visitor{
+        transform: translateX(207.5px);
+        background-color: yellowgreen;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+}
+@layer utilities{
+    .delivery{
+        transform: translateX(207.5px);
+        background-color: #e59292;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        border-radius: 25px;
+        cursor: pointer;
+    }
 }
 
 @layer utilities{
-
+    .hover-delivery{
+        transform: translateX(207.5px);
+        background-color: yellowgreen;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        border-radius: 25px;
+        cursor: pointer;
+    }
 }
+
+@layer utilities{
+    .houseowner{
+        transform: translateX(207.5px);
+        background-color: #e59292;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+}
+
+@layer utilities{
+    .hover-houseowner{
+        transform: translateX(207.5px);
+        background-color: yellowgreen;
+        width: 150px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+}
+
+@layer utilities{
+    .visitor button{
+        margin-top: 10%;
+    }
+}
+
+@layer utilities{
+    .delivery button{
+        margin-top: 10%;
+    }
+}
+
+@layer utilities{
+    .houseowner button{
+        margin-top: 10%;
+    }
+}
+@layer utilities{
+    .hover-visitor button{
+        margin-top: 10%;
+    }
+}
+
+@layer utilities{
+    .hover-delivery button{
+        margin-top: 10%;
+    }
+}
+
+@layer utilities{
+    .hover-houseowner button{
+        margin-top: 10%;
+    }
+}
+

@@ -3,28 +3,43 @@ import { useState } from 'react'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [userName, setCount] = useState('')
+  const [visitorstate, setVisitorstate] = useState(false)
+  const [deliverystate, setDeliverystate] = useState(false)
+  const [houseownerstate, setHouseownerstate] = useState(false)
+  const visitorClick = ()=>{
+    <Link to="/visitorInterface"/>
+  }
+  const deliveryClick = ()=>{
+    <Link to="/deliveryInterface"/>
+  }
+  const houseownerClick = ()=>{
+    <Link to="/houseownerInterface"/>
+  }  
+  
   return (
     
-    <div>
+    <div className='select'>
       <div className='status'>
         <div className = 'Profile'>
           <img src="" alt="" />
-          <p className='welcome'>Welcome <p className = 'user'> user </p> <p className = 'address'> kb 23/256 </p> </p>
+          <p className='welcome'>Welcome <p className = 'userName'> {userName} </p> </p>
         </div>
       </div>
       
-      <div className='select'>
-        <h1>
-        <button className = 'visitor' hrel = "#"> Visitor </button>
-        </h1>
-        <h2>
-        <button className = 'delivery' hrel = "#"> Delivery </button>
-        </h2>
-        <h3>
-        <button className = 'houseowner' hrel = "#"> House Owner </button >
-        </h3>
+      <div className={ visitorstate ? "hover-visitor" : "visitor"} 
+      onMouseEnter={()=>{setVisitorstate(true)}} onMouseLeave={()=>{setVisitorstate(false)}}>
+        <button onclick={visitorClick}> Visitor </button>
+      </div>
+      
+      <div className={deliverystate ? "hover-delivery" : "delivery"} 
+      onMouseEnter={()=>{setDeliverystate(true)}} onMouseLeave={()=>{setDeliverystate(false)}}>
+        <button onclick={deliveryClick} > Delivery </button>
+      </div>
+      
+      <div className={houseownerstate ? "hover-houseowner":"houseowner"} 
+      onMouseEnter={()=>{setHouseownerstate(true)}} onMouseLeave={()=>{setHouseownerstate(false)}}>
+        <button onclick={houseownerClick} > House Owner </button >
       </div>
     </div>
   )

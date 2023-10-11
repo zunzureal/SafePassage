@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
+<<<<<<< HEAD
     <div>
       <div className="status">
         <div className = "Profile">
@@ -28,6 +27,10 @@ function App() {
       <h3>
         <button className = "houseowner" hrel = "#"> House Owner </button >
       </h3>
+=======
+    <div className=''>
+
+>>>>>>> e896eb76e1b058aa11506e264fe5330e1b848e03
     </div>
   )
 }

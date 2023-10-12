@@ -15,10 +15,9 @@ function App() {
   }
   const houseownerClick = ()=>{
     <Link to="/houseownerInterface"/>
-  }  
+  }
   
   return (
-    <div className='App'>
     <div className='select'>
       <div className='status'>
         <div className = 'Profile'>
@@ -27,22 +26,22 @@ function App() {
         </div>
       </div>
       
-      <div className={ visitorstate ? "hover-visitor" : "visitor"} 
+      <div className={ visitorstate ? "hover-visitor" : "visitor"}
       onMouseEnter={()=>{setVisitorstate(true)}} onMouseLeave={()=>{setVisitorstate(false)}}>
         <button onclick={visitorClick}> Visitor </button>
       </div>
       
-      <div className={deliverystate ? "hover-delivery" : "delivery"} 
+      <div className={deliverystate ? "hover-delivery" : "delivery"}
       onMouseEnter={()=>{setDeliverystate(true)}} onMouseLeave={()=>{setDeliverystate(false)}}>
         <button onclick={deliveryClick} > Delivery </button>
       </div>
       
-      <div className={houseownerstate ? "hover-houseowner":"houseowner"} 
+      <div className={houseownerstate ? "hover-houseowner":"houseowner"}
       onMouseEnter={()=>{setHouseownerstate(true)}} onMouseLeave={()=>{setHouseownerstate(false)}}>
         <button onclick={houseownerClick} > House Owner </button >
       </div>
     </div>
-  )
+    )
 }
 
 export default App

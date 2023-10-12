@@ -27,7 +27,7 @@ app.get('/getData',async (req, res)=>{
     
     const db = await connection();
     const result = await db.query('select * from houseOwner')
-    const data = result[0] 
+    const data = result[0]
     res.json(data)
 });
 

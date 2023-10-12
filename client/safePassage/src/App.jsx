@@ -15,10 +15,9 @@ function App() {
   }
   const houseownerClick = ()=>{
     <Link to="/houseownerInterface"/>
-  }  
+  }
   
   return (
-    <div className='App'>
     <div className='select'>
       <div className='status'>
         <div className = 'Profile'>
@@ -42,7 +41,7 @@ function App() {
         <button onclick={houseownerClick} > House Owner </button >
       </div>
     </div>
-  )
+    )
 }
 
 export default App

@@ -18,7 +18,7 @@ function App() {
   }  
   
   return (
-    
+    <div className='App'>
     <div className='select'>
       <div className='status'>
         <div className = 'Profile'>

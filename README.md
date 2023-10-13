@@ -2,6 +2,8 @@
 
 **A Security Application** use for entering and leaving the estate village gate and tracking log
 
+![โครงการใหม่ (3)](https://github.com/zunzureal/SafePassage/assets/57216006/b86918bf-052f-4789-b103-51a0efce15eb)
+
 ## Getting started
 
 ```
@@ -33,5 +35,3 @@ Install SafePassage with npm
 - [@Puripan22](https://github.com/Puripan22)
 - [@Sinyonar0623](https://github.com/Sinyonar0623)
 - [@ninewnup_](https://github.com/Horizon852)
-
-![โครงการใหม่ (3)](https://github.com/zunzureal/SafePassage/assets/57216006/b86918bf-052f-4789-b103-51a0efce15eb)

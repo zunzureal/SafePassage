@@ -1,15 +1,37 @@
 # SafePassage
 
-
+**A Security Application** use for entering and leaving the estate village gate and tracking log
 
 ## Getting started
 
 ```
 git remote add origin https://github.com/zunzureal/SafePassage.git
-git branch -M main
+git branch -M [Your_branch_name]
 git pull origin main
-git push -uf origin main
+git add .
+git commit -m "First push"
+git push origin [Your_branch_name]
 ```
 
+## Installation
 
-![_47ccf133-5903-434c-9874-44ec6db0c333](https://github.com/zunzureal/SafePassage/assets/57216006/3c8f071b-c5e2-4279-b7c1-cd62a2a2a9b1)
+Install SafePassage with npm
+
+```bash
+  cd client
+  cd safePassage
+  npm install
+  npm run dev
+```
+    
+## Authors
+
+- [@zunzureal](https://github.com/zunzureal)
+- [@Kritsana](https://github.com/jeagerism)
+- [@pay501](https://github.com/pay501)
+- [@Eclair2199](https://github.com/Eclair2199)
+- [@Puripan22](https://github.com/Puripan22)
+- [@Sinyonar0623](https://github.com/Sinyonar0623)
+- [@ninewnup_](https://github.com/Horizon852)
+
+![โครงการใหม่ (3)](https://github.com/zunzureal/SafePassage/assets/57216006/b86918bf-052f-4789-b103-51a0efce15eb)

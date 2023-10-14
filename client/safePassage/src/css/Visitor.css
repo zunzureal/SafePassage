@@ -1,1 +1,151 @@
+    .visitor-container{
+        display: flex;
+        border: solid 2px black;
+        justify-content: center;
+        align-content: center;
+        width: 60%;
+        margin-top: 5%;
+        height: 700px;
+        margin-left: 20%;
+        
+    }
 
+    .leftside{
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        background-color: #8e75e4;
+        background-position: 10px;
+    }
+    .textsign p{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 30px;
+        color: white;
+        font-weight: 400;
+    }
+
+    .qrcode{
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        border: solid 0.5px black;
+        margin-left: 22.5%;
+        margin-bottom: 20px;
+        margin-top: 25%;
+        background-color: aqua;
+    }
+    
+    .rightside{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signup{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        
+    }
+
+    .signup p{
+        margin-top: 20px;
+        font-size: larger;
+    }
+
+    .signup1{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    .google{
+        margin-left: 30px;
+        
+    }
+    .google button{
+        border-radius: 20px;
+        height: 50px;
+        width: 150px;
+        display: flex;
+        background-color: white;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .github button{
+        border-radius: 20px;
+        height: 50px;
+        width: 150px;
+        display: flex;
+        background-color: white;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .google button span{
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 8%;
+    }
+
+    .github button span{
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 8%;
+    }
+
+    .github button img{
+        margin-top: 5%;
+        margin-left: 8%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .google button img{
+        margin-top: 5%;
+        margin-left: 8%;
+        width: 35px;
+        height: 35px;
+    }
+
+    .former{
+        background-color: #EFEFEF;
+    }
+    
+    .former input{
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        margin-top: 7%;
+        text-align: center;
+        margin-left: 29.07%;
+        height: 50px;
+        width: 250px;
+    }
+
+    .summit1{
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5%;
+    }
+
+    .summit1 button{
+        border-radius: 20px;
+        height: 50px;
+        width: 150px;
+        background-color: blue;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .summit1 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }

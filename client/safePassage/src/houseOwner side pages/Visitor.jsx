@@ -29,8 +29,38 @@ function Visitor() {
 
     <div className='visitor-container'>
 
-      <form>
 
+      <div className='leftside'>
+        <div className='textsign'><p>SIGN UP</p></div>
+        <div className='qrcode'><img src={image} alt="" /></div>
+      </div>
+      
+      <div className='rightside' >
+       
+       <div className='signup'>
+       <p>Sign up with</p>
+        
+        <div className='signup1'>
+        
+        <div className='github'>
+          <button>
+            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/github-7521512-7196736.png?f=webp' alt=''/> <span>GITHUB</span>
+          </button>
+        </div>
+        
+        <div className='google'>
+          <button>
+            <img src='https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png' alt=''/> <span>GOOGLE</span>
+          </button>
+        </div>
+        </div>
+      </div>
+       
+        <div className='former'>
+        <form>
+
+        
+        
         <input
           type="text"
           placeholder='ใส่เลขบัตรประชาชนของญาติท่าน'
@@ -38,44 +68,46 @@ function Visitor() {
           onChange={(e) => { setId(e.target.value) }}
         />
 
-        <input
+          <input
           type="text"
           placeholder='ชื่อญาติ'
           className='ml-2'
           onChange={(e) => { setFirstName(e.target.value) }}
         />
 
-        <input
+      
+          <input
           type="text"
           placeholder='นามสกุลญาติ'
           className='ml-2'
           onChange={(e) => { setLastName(e.target.value) }}
         />
 
-        <input
+       <input
           type="text"
           placeholder='บ้านเลขที่'
           className='ml-2'
           onChange={(e) => { setHouseNo(e.target.value) }}
         />
 
-        <input
+
+          <input
           type="text"
           placeholder='ป้ายทะเบียนรถ'
           className='ml-2'
           onChange={(e) => { setLicenseTemplate(e.target.value) }}
-        /><br />
+        />
+        <br />
 
-        <button
-          className='ml-2'
-          onClick={submitBtn}
-        >
-          Submit
-        </button>
+        <div className='summit1'>
+          <button className='ml-2' onClick={submitBtn}>
+          <span>Submit</span>
+          </button>
+        </div>
 
-      </form>
-
-      <div><img src={image} alt="" /></div>
+       </form>
+       </div>
+       </div>
 
     </div>
   )

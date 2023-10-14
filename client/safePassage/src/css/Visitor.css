@@ -1,1 +1,135 @@
+    .visitor-container{
+        display: flex;
+        border: solid 2px black;
+        justify-content: center;
+        align-content: center;
+        width: 37%;
+        margin-left: 31.5%;
+        margin-top: 10%;
+        height: 350px;
+        
+    }
 
+    .leftside{
+        justify-content: center;
+        align-content: center;
+        width: 200%;
+        background-color: rgb(110, 110, 236);
+    }
+    .textsign p{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .qrcode{
+        margin-top: 20px;
+        width: 250px;
+        height: 250px;
+        border: solid 0.5px black;
+        margin-left: 20.17%;
+        margin-bottom: 20px;
+        background-color: aqua;
+    }
+    
+    .rightside{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signup{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    .signup p{
+        margin-top: 20px;
+    }
+
+    .signup1{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    .google{
+        margin-left: 30px;
+        
+    }
+    .google button{
+        border-radius: 20px;
+        height: 30px;
+        width: 100px;
+        display: flex;
+    }
+
+    .github button{
+        border-radius: 20px;
+        height: 30px;
+        width: 100px;
+        display: flex;
+    }
+
+    .google button span{
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+
+    .github button span{
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 5px;
+        margin-top: 2px;
+    }
+
+    .github button img{
+        margin-top: 3px;
+        margin-left: 7px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .google button img{
+        margin-top: 3px;
+        margin-left: 7px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .former{
+        margin-top: 30px;
+        background-color: aqua;
+    }
+    
+    .former input{
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+
+    .summit1{
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        background-color: blue;
+    }
+
+    .summit1 button{
+        border-radius: 20px;
+        height: 30px;
+        width: 70px;
+    }
+
+    .summit1 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }

@@ -31,7 +31,6 @@ app.use('/',visitor);
 app.use('/',getData);
 
 
-
 app.listen(4444,()=>{
     console.log("server is running")
 });

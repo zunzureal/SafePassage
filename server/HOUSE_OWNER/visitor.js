@@ -16,16 +16,7 @@ const connection = async ()=>{
     })
     return db;
 };
-// Test
-/* visitor.get('/getData',async(req,res)=>{
-    const db =await connection();
-    const result =await db.query('select * from Visitor');
-    const data = result[0];
-    console.log(data)
-    res.json(data)
-});
 
- */
 //Receive and insert visitor that houseOwner fill in data
 visitor.post('/genQR',async (req, res)=>{
     try{

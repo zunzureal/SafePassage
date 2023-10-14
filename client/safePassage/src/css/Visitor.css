@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body{
+    font-family: Poppins,sans-serif;
+    }
+    
     .visitor-container{
         display: flex;
         border: solid 2px black;
@@ -15,7 +20,6 @@
         align-content: center;
         width: 100%;
         background-color: #8e75e4;
-        background-position: 10px;
     }
     .textsign p{
         text-align: center;
@@ -64,13 +68,13 @@
 
 
     .google{
-        margin-left: 30px;
+        margin-left: 10%;
         
     }
     .google button{
         border-radius: 20px;
         height: 50px;
-        width: 150px;
+        width: 200px;
         display: flex;
         background-color: white;
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
@@ -79,7 +83,7 @@
     .github button{
         border-radius: 20px;
         height: 50px;
-        width: 150px;
+        width: 200px;
         display: flex;
         background-color: white;
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
@@ -88,27 +92,29 @@
     .google button span{
         text-align: center;
         margin-right: 10%;
-        margin-left: 10%;
-        margin-top: 8%;
+        margin-left: 15%;
+        margin-top: 6%;
+        font-size: larger;
     }
 
     .github button span{
         text-align: center;
         margin-right: 10%;
-        margin-left: 10%;
-        margin-top: 8%;
+        margin-left: 15%;
+        margin-top: 6%;
+        font-size: larger;
     }
 
     .github button img{
-        margin-top: 5%;
-        margin-left: 8%;
+        margin-top: 4%;
+        margin-left: 11%;
         width: 35px;
         height: 35px;
     }
 
     .google button img{
-        margin-top: 5%;
-        margin-left: 8%;
+        margin-top: 4%;
+        margin-left: 11%;
         width: 35px;
         height: 35px;
     }

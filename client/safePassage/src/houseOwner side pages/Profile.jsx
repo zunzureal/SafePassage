@@ -1,18 +1,27 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function Profile() {
-    const [userName, setCount] = useState('')
+function Profile(type) {
+
+    const navigate = useNavigate()
+    const [userName, setCount] = useState('Bro')
     const [visitorstate, setVisitorstate] = useState(false)
     const [deliverystate, setDeliverystate] = useState(false)
     const [houseownerstate, setHouseownerstate] = useState(false)
-    const visitorClick = () => {
-        <Link to="/visitorInterface" />
+
+    console.log(type)
+
+    const visitorClick = (e) => {
+        e.preventDefault();
+        navigate('/houseowner/profile/visitor')
     }
-    const deliveryClick = () => {
-        <Link to="/deliveryInterface" />
+    const deliveryClick = (e) => {
+        e.preventDefault()
+        navigate('/houseowner/profile/grabdelivery')
     }
-    const houseownerClick = () => {
-        <Link to="/houseownerInterface" />
+    const houseownerClick = (e) => {
+        e.preventDefault()
+        navigate('/houseowner/profile/houseowner')
     }
 
     return (
@@ -20,23 +29,30 @@ function Profile() {
             <div className='status'>
                 <div className='Profile'>
                     <img src="" alt="" />
-                    <p className='welcome'>Welcome <p className='userName'> {userName} </p> </p>
+                    <p className='welcome'>Welcome <span className='userName font-bold text-lg'> {userName} </span> </p>
                 </div>
             </div>
 
-            <div className={visitorstate ? "hover-visitor" : "visitor"}
-                onMouseEnter={() => { setVisitorstate(true) }} onMouseLeave={() => { setVisitorstate(false) }}>
-                <button onclick={visitorClick}> Visitor </button>
+            <div
+                className={visitorstate ? "hover-visitor" : "visitor"}
+                onMouseEnter={() => { setVisitorstate(true) }}
+                onMouseLeave={() => { setVisitorstate(false) }}
+            >
+                <button onClick={visitorClick}> Visitor </button>
             </div>
 
-            <div className={deliverystate ? "hover-delivery" : "delivery"}
-                onMouseEnter={() => { setDeliverystate(true) }} onMouseLeave={() => { setDeliverystate(false) }}>
-                <button onclick={deliveryClick} > Delivery </button>
+            <div
+                className={deliverystate ? "hover-delivery" : "delivery"}
+                onMouseEnter={() => { setDeliverystate(true) }}
+                onMouseLeave={() => { setDeliverystate(false) }}>
+                <button onClick={deliveryClick} > Delivery </button>
             </div>
 
-            <div className={houseownerstate ? "hover-houseowner" : "houseowner"}
-                onMouseEnter={() => { setHouseownerstate(true) }} onMouseLeave={() => { setHouseownerstate(false) }}>
-                <button onclick={houseownerClick} > House Owner </button >
+            <div
+                className={houseownerstate ? "hover-houseowner" : "houseowner"}
+                onMouseEnter={() => { setHouseownerstate(true) }}
+                onMouseLeave={() => { setHouseownerstate(false) }}>
+                <button onClick={houseownerClick} > House Owner </button >
             </div>
         </div>
     )

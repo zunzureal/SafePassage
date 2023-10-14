@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* devanagari */
+
 @layer utilities{
     input,button{
         border: 1px black solid;

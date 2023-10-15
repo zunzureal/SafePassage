@@ -12,7 +12,7 @@ function Home() {
         navigate('/security/login');
     };
     function houseLoginBtn (){
-        navigate('/houseowner/profile')
+        navigate('/houseowner/login')
     }
 
     return (

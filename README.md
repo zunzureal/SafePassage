@@ -35,3 +35,5 @@ Install SafePassage with npm
 - [@Puripan22](https://github.com/Puripan22)
 - [@Sinyonar0623](https://github.com/Sinyonar0623)
 - [@ninewnup_](https://github.com/Horizon852)
+
+require('crypto').randomBytes(64).toString('hex')

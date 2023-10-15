@@ -4,7 +4,7 @@ const cors = require ('cors');
 const mysql = require('mysql2/promise');
 const login = require('./API_LOGIN/login');
 const visitor = require('./HOUSE_OWNER/visitor');
-const getData = require('./ADMIN/houseOwner')
+const bcrypt = require('bcrypt');
 const dbHost = process.env.HOST;
 const dbPassword = process.env.PASSWORD;
 
@@ -26,9 +26,14 @@ const connection = async ()=>{
     return db;
 };
 
+/* const password = '427517527safepassage'
+async function hash (){
+    console.log(await(bcrypt.hash(password,10)))
+}
+hash() */
+
 app.use('/',login);
 app.use('/',visitor);
-app.use('/',getData);
 
 
 app.listen(4444,()=>{

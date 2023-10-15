@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function HouseOwner() {
+  
   return (
     <div>HouseOwner</div>
   )

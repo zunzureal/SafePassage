@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from "../assets/Logo White with Name.png";
+import BlackLogo from "../assets/Logo Black with Name.png";
 import "../css/HouseOwner.css";
 
 function HouseOwnerLogin() {
@@ -10,6 +10,10 @@ function HouseOwnerLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const homeBtn = (e)=>{
+    e.preventDefault();
+    navigate('/')
+  };
   const loginBtn = (e) => {
     e.preventDefault();
     if (username && password) {
@@ -33,7 +37,7 @@ function HouseOwnerLogin() {
 
       <div className='desktop'>
         <div className="left-side">{/* Left-side */}
-          <img src={Logo} alt="" />
+          <img src={BlackLogo} alt="" onClick={homeBtn}/>
         </div>
         <div className="right-side">{/* Right side */}
           <div className="header">
@@ -64,8 +68,8 @@ function HouseOwnerLogin() {
       </div>
 
       <div className='mobile'>
-        <div className="header">
-          <img src={Logo} alt="Logo" />
+        <div className="header" onClick={homeBtn}>
+          <img src={BlackLogo} alt="Logo" />
         </div>
         <div className="input">
           <p>Username</p>

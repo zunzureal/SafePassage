@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function Profile(type) {
@@ -9,8 +9,18 @@ function Profile(type) {
     const [deliverystate, setDeliverystate] = useState(false)
     const [houseownerstate, setHouseownerstate] = useState(false)
 
-    console.log(type)
-
+    const token = localStorage.getItem('token');
+    
+    useEffect(()=>{
+        if(!token){
+            navigate('/houseowner/login')
+        }
+    },[])
+    const logoutBtn = (e)=>{
+        e.preventDefault();
+        localStorage.setItem('token','');
+        navigate('/houseowner/login')
+    }
     const visitorClick = (e) => {
         e.preventDefault();
         navigate('/houseowner/profile/visitor')
@@ -54,6 +64,8 @@ function Profile(type) {
                 onMouseLeave={() => { setHouseownerstate(false) }}>
                 <button onClick={houseownerClick} > House Owner </button >
             </div>
+
+            <button onClick={logoutBtn}>Logout</button>
         </div>
     )
 }

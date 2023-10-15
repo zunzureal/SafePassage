@@ -1,9 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../css/Visitor.css";
 
 function Visitor() {
-
+  const navigate = useNavigate()
   const [id, setId] = useState('')
   const [houseNo, setHouseNo] = useState('');
   const type = "houseOwner";
@@ -12,6 +13,13 @@ function Visitor() {
   const [licenseTemplate, setLicenseTemplate] = useState('')
   const [image, setImage] = useState('');
 
+  const token = localStorage.getItem('token');
+    
+    useEffect(()=>{
+        if(!token){
+            navigate('/houseowner/login')
+        }
+    },[])
   const submitBtn = (e) => {
     e.preventDefault();
     if (id && houseNo && type && firstName && lastName && licenseTemplate) {

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import visitorImage from "../assets/imagevisitor.png";
 import { useNavigate } from 'react-router-dom';
 import "../css/Visitor.css";
 
@@ -35,22 +36,26 @@ function Visitor() {
 
   return (
 
-    <div className='visitor-container'>
-
+    <div className='visitor-backgound'>
+      
+      <div className='visitor-container'>
 
       <div className='leftside'>
-        <div className='textsign'><p>SIGN UP</p></div>
-        <div className='qrcode'><img src={image} alt="" /></div>
+        
+        <div className='textsign'><p>Visitor</p></div>
+        <div className='imagevisitor'><img src={visitorImage} height= "100%"  width= "100%"/></div>
+        <div className='qrcode'><img src={image} width="300px"  height="300px" alt="" /></div>
+      
       </div>
       
       <div className='rightside' >
        
        <div className='signup'>
-       <p>Sign up with</p>
+       <p>Sign up</p>
         
-        <div className='signup1'>
+        {/*<div className='signup1'>
         
-        <div className='github'>
+         <div className='github'>
           <button>
             <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/github-7521512-7196736.png?f=webp' alt=''/> <span>GITHUB</span>
           </button>
@@ -60,8 +65,8 @@ function Visitor() {
           <button>
             <img src='https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png' alt=''/> <span>GOOGLE</span>
           </button>
-        </div>
-        </div>
+        </div> 
+        </div>*/} 
       </div>
        
         <div className='former'>
@@ -117,7 +122,8 @@ function Visitor() {
        </div>
        </div>
 
-    </div>
+      </div>
+    </div> 
   )
 }
 

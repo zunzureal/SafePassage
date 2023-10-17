@@ -3,23 +3,24 @@
     font-family: Poppins,sans-serif;
     }
 
-    .visitor-backgound{
-        background-color: #ae7d2869;
+    .grab-backgound{
+        background-color: #c6343469;
     }
-    .visitor-container{
+    .grab-container{
         display: flex;
         /*justify-content: center;
         align-content: center;*/
-        width: 100%;    
+        width: 100%;
         height: 100%; 
     }
 
-    .leftside{
+    .leftsideG{
         justify-content: center;
         align-content: center;
-        width: 90%;
+        width: 806px;
+        height: 736px;
     }
-    .textsign p{
+    .textsignG p{
         text-align: center;
         margin-top: 20px;
         font-size: 30px;
@@ -28,38 +29,40 @@
         transform: translateY(10%);
     }
 
-    .imagevisitor{
-        width: 300px;
-        height: 200px;
+    .imagegrab{
+        width: 350px;
+        height: 186px;
     }
 
-    .imagevisitor img{
-        margin-left: 84.4%;
+    .imagegrab img{
+        margin-left: 67%;
         margin-top: 15%;
-        height: 300px;
-        width: 400px;
+        height: 280px;
+        width: 450px;
     }
 
 
-    .qrcode{
+    .qrcodeG{
         margin-top: 20px;
         width: 300px;
         height: 300px;
         border: solid 0.5px black;
-        transform: translateX(84.5%);
+        transform: translateX(86.6%);
         margin-bottom: 20px;
         margin-top: 13%;
         background-color: aqua;
     }
     
-    .rightside{
+    .rightsideG{
         display: flex;
         flex-direction: column;
         height: 739px;
         border-radius: 25px;
+        width: 729px;
+
     }
 
-    .signup{
+    .signupG{
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -68,7 +71,7 @@
         height: 138px;
     }
 
-    .signup p{
+    .signupG p{
         margin-top: 20px;
         font-size: larger;
     }
@@ -134,13 +137,13 @@
         height: 35px;
     }*/
 
-    .former{
+    .formerG{
         background-color: #ebe3e3;
         height: 100%;
         border-bottom-left-radius: 30px;
     }
     
-    .former input{
+    .formerG input{
         justify-content: center;
         align-content: center;
         margin: auto;
@@ -152,15 +155,13 @@
         border-radius: 10px;
     }
 
-    .summit1{
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        margin-top: 5%;
+    .summit2{
+        margin-left: 39%;
+        margin-top: 18.7%;
         margin-bottom: 5%;
     }
 
-    .summit1 button{
+    .summit2 button{
         border-radius: 20px;
         height: 50px;
         width: 150px;
@@ -168,7 +169,7 @@
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
     }
 
-    .summit1 button span{
+    .summit2 button span{
         margin-left: 5px;
         margin-top: 5px;
         margin-right: 5px;

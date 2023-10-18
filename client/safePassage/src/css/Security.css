@@ -21,16 +21,6 @@ header {
     
 }
 
-nav {
-    height: 60px;
-    
-    background: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
 .logo img{
     width: 18%;
     height: auto; /* Maintain aspect ratio while resizing */

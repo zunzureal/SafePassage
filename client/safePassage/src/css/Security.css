@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto:wght@300;400;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Prompt', sans-serif;
-
-}
-
 .container {
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */

@@ -14,7 +14,12 @@ git add .
 git commit -m "First push"
 git push origin [Your_branch_name]
 ```
+cd
 
+<<<<<<< HEAD
+npm run dev
+
+=======
 ## Installation
 
 Install SafePassage with npm
@@ -37,3 +42,4 @@ Install SafePassage with npm
 - [@ninewnup_](https://github.com/Horizon852)
 
 require('crypto').randomBytes(64).toString('hex')
+>>>>>>> 330b2e8b92ae7fa750f7feaadbec3a83f61b6f00

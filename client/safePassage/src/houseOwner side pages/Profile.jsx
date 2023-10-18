@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import logo from "../assets/Logo Black with Name.png"
+import "../css/profile.css"
+import profile from "../assets/profile.png"
+import visitors from "../assets/tour-guide.png"
+import delivery from "../assets/delivery.png"
+import house from "../assets/broker.png"
+
+
 
 function Profile(type) {
 
@@ -10,15 +18,15 @@ function Profile(type) {
     const [houseownerstate, setHouseownerstate] = useState(false)
 
     const token = localStorage.getItem('token');
-    
-    useEffect(()=>{
-        if(!token){
+
+    useEffect(() => {
+        if (!token) {
             navigate('/houseowner/login')
         }
-    },[])
-    const logoutBtn = (e)=>{
+    }, [])
+    const logoutBtn = (e) => {
         e.preventDefault();
-        localStorage.setItem('token','');
+        localStorage.setItem('token', '');
         navigate('/houseowner/login')
     }
     const visitorClick = (e) => {
@@ -35,7 +43,79 @@ function Profile(type) {
     }
 
     return (
-        <div className='select'>
+        <div className="container">
+            <div className="left-side2">
+                <img src={logo} alt="" />
+
+            </div>
+            <div className="item-right">
+                <div className="heads">
+                    <div className='welcome'>
+                        <div className='profile'>
+                            <img src={profile} className='profilepicture' /> <br></br>
+                        </div>
+                        <div className='land'>
+                            <div className='ben'>welcome</div>
+                            <div >User</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className='feed'>
+                    <div className='visitors' onClick={visitorClick}>
+                        <div className='visitors-img'>
+                            <img src={visitors} alt="" width="50px" height="50px" /> <br></br>
+                        </div>
+                        <div className="header-btn-create">
+                            <a href="#" className="visitorstext">Visitors</a>
+
+                        </div>
+                    </div>
+
+                    <div className='delivery' onClick={deliveryClick}> 
+                        <div className='delivery-img'>
+                            <img src={delivery} alt="" width="50px" height="50px" /> <br></br>
+                        </div>
+                        <div className="header-btn-create">
+                        <a href="#" className="logout-account">Delivery</a>
+                        </div>
+                    </div>
+
+                    <div className='house' onClick={houseownerClick}>
+                        <div className='house-img'>
+                            <img src={house} alt="" width="50px" height="50px" /> <br></br>
+                        </div>
+                        <div className="header-btn-create">
+                            <a href="#" className="logout-account">House Owner</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div className='bottom'>
+
+                    <div className="header-btn-create"onClick={logoutBtn} >
+                        <a href="#" className="logout-account">Logout</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    )
+}
+export default Profile
+
+/* 
+<div className='select'>
             <div className='status'>
                 <div className='Profile'>
                     <img src="" alt="" />
@@ -67,6 +147,4 @@ function Profile(type) {
 
             <button onClick={logoutBtn}>Logout</button>
         </div>
-    )
-}
-export default Profile
+*/

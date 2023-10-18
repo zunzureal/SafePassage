@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto:wght@300;400;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+
+}
+
+
 .container {
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
@@ -8,7 +17,6 @@
 
 header {
     height: 1110px;
-    background: url('../assets/Data_security_.svg') no-repeat;
     background-position: right -150px bottom 350px;
     
 }
@@ -22,10 +30,11 @@ nav {
     align-items: center;
 }
 
+
 .logo img{
     width: 18%;
     height: auto; /* Maintain aspect ratio while resizing */
-    
+    transform: translateY(-137px);
 }
 
 .header-title h1 {
@@ -98,13 +107,13 @@ nav {
   outline: none;
 }
 
-.flex{
+.flexx{
   margin-top: 20px;
   display: flex;
   gap: 1.5em;
 }
 
-.flex-col{
+.flexx-col{
   flex-direction: column;
 }
 
@@ -125,4 +134,16 @@ nav {
     background: #111B47;
     padding: .5rem 15rem;
     text-decoration: none;
+}
+
+.marginall {
+    margin-top: 170px;
+}
+
+.langauge {
+    transform: translateX(1200px) translateY(-190px);
+}
+
+.bgImage{
+    transform: translateX(-10px) translateY(-100px);
 }

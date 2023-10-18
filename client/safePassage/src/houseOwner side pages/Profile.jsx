@@ -44,7 +44,7 @@ function Profile(type) {
 
     return (
         <div className="container">
-            <div className="left-side">
+            <div className="left-side ">
                 <img src={logo} alt="" />
 
             </div>
@@ -54,9 +54,9 @@ function Profile(type) {
                         <div className='profile'>
                             <img src={profile} alt="" width="50px" height="50px" /> <br></br>
                         </div>
-                        <div>
-                            <div className='land'>welcome</div>
-                            <div className='land'>User</div>
+                        <div className='land'>
+                            <div className='ben'>welcome</div>
+                            <div >User</div>
                         </div>
                     </div>
 
@@ -98,19 +98,6 @@ function Profile(type) {
                         <a href="#" className="logout-account">Logout</a>
 
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
 
 

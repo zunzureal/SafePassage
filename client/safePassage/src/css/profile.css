@@ -17,19 +17,19 @@
     height: 100vh;
 }
 .item-right .feed{
-    height: ;
+
     
     height: 35vh;
 }
 
 .item-right .bottom{
     
-    height: 35vh;
+    height: 45vh;
 }
 
 .item-right .heads{
-    
-    height: 35vh;
+    padding-top: 5vh;
+    height: 20vh;
 }
 
  .item-right .heads .welcome {
@@ -41,7 +41,7 @@
     border-radius: 10px;
     background-color: #17C964;
     margin-left: 70px;
-    margin-top: 70px;
+
 
     
 }
@@ -56,6 +56,7 @@
     border-radius: 10px;
     background-color: #17C964;
     margin-left: 150px;
+    margin-top: 40px;
 }
 .item-right .feed .delivery {
     display: flex;
@@ -68,6 +69,7 @@
     border-radius: 10px;
     background-color: #17C964;
     margin-left: 150px;
+    
 }
 
 .item-right .feed .house {
@@ -114,23 +116,49 @@
 .feed .visitors .header-btn-create{
     margin-top: 15px;
     margin-left: 5px;
+    font-size: 20px;
 }
 
 .feed .delivery .header-btn-create{
     margin-top: 15px;
     margin-left: 5px;
+    font-size: 20px;
 }
 
 .feed .house .header-btn-create{
     margin-top: 15px;
     margin-left: 5px;
+    font-size: 20px;
 }
 
 .bottom .header-btn-create{
     margin-top: 15px;
     margin-left: 17px;
+    font-size: 20px;
 }
 
+.heads .welcome {
+    margin-right: 10px;
+    margin-top: 10px;
+ 
+}
+
+.heads .welcome .land {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.heads .welcome .profile{
+    margin-top: 25px;
+}
+
+
+.heads .welcome .land .ben {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+}
 
 
 

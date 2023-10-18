@@ -12,7 +12,7 @@
 .container {
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
-    
+    background-color: #ffff;
 }
 
 header {
@@ -127,6 +127,7 @@ header {
 }
 
 .marginall {
+    margin-left: 150px;
     margin-top: 170px;
 }
 

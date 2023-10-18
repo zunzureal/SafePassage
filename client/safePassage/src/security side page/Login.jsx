@@ -20,7 +20,7 @@ function SecurityLogin(){
                     </select>
                 </div>
                 <div className='bgImage'>
-                    <img src={bgImage} alt="image" />
+                    <img src={bgImage} alt="background" />
                 </div>
             </nav>
 

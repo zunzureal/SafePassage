@@ -1,10 +1,11 @@
 import React from 'react';
 import '../css/Security.css'
 import myImage from '../assets/safepass.png';
+import bgImage from '../assets/Data_security_.svg'
 
 function SecurityLogin(){
     return(
-        <header>
+        <header className='marginall'>
         <div className="container">
             <nav>
                 <div class="logo"> 
@@ -17,6 +18,9 @@ function SecurityLogin(){
                         <option value="Eng">Japanese(JP)</option>
                         <option value="Eng">Chinese(CH)</option>
                     </select>
+                </div>
+                <div className='bgImage'>
+                    <img src={bgImage} alt="image" />
                 </div>
             </nav>
 
@@ -31,7 +35,7 @@ function SecurityLogin(){
                <div className="header-or">
                     <h3>OR</h3>
                </div>
-                <form id='form' className='flex flex-col'>
+                <form id='form' className='flexx flexx-col'>
                   <input type='text' placeholder='username'></input>
                   <input type='text' placeholder='password'></input>
                 </form>

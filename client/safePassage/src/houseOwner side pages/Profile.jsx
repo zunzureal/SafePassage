@@ -44,7 +44,7 @@ function Profile(type) {
 
     return (
         <div className="container">
-            <div className="left-side ">
+            <div className="left-side2">
                 <img src={logo} alt="" />
 
             </div>

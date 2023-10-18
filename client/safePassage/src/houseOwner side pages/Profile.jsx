@@ -52,7 +52,7 @@ function Profile(type) {
                 <div className="heads">
                     <div className='welcome'>
                         <div className='profile'>
-                            <img src={profile} alt="" width="50px" height="50px" /> <br></br>
+                            <img src={profile} className='profilepicture' /> <br></br>
                         </div>
                         <div className='land'>
                             <div className='ben'>welcome</div>
@@ -67,7 +67,7 @@ function Profile(type) {
                             <img src={visitors} alt="" width="50px" height="50px" /> <br></br>
                         </div>
                         <div className="header-btn-create">
-                            <a href="#" className="logout-account">Visitors</a>
+                            <a href="#" className="visitorstext">Visitors</a>
 
                         </div>
                     </div>

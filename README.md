@@ -1,25 +1,45 @@
 # SafePassage
 
+**A Security Application** use for entering and leaving the estate village gate and tracking log
 
+![โครงการใหม่ (3)](https://github.com/zunzureal/SafePassage/assets/57216006/b86918bf-052f-4789-b103-51a0efce15eb)
 
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
 ```
 git remote add origin https://github.com/zunzureal/SafePassage.git
-git branch -M main
+git branch -M [Your_branch_name]
 git pull origin main
-git push -uf origin main
+git add .
+git commit -m "First push"
+git push origin [Your_branch_name]
 ```
 cd
 
+<<<<<<< HEAD
 npm run dev
 
+=======
+## Installation
+
+Install SafePassage with npm
+
+```bash
+  cd client
+  cd safePassage
+  npm install
+  npm run dev
+```
+    
+## Authors
+
+- [@zunzureal](https://github.com/zunzureal)
+- [@Kritsana](https://github.com/jeagerism)
+- [@pay501](https://github.com/pay501)
+- [@Eclair2199](https://github.com/Eclair2199)
+- [@Puripan22](https://github.com/Puripan22)
+- [@Sinyonar0623](https://github.com/Sinyonar0623)
+- [@ninewnup_](https://github.com/Horizon852)
+
+require('crypto').randomBytes(64).toString('hex')
+>>>>>>> 330b2e8b92ae7fa750f7feaadbec3a83f61b6f00

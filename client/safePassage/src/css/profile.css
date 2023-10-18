@@ -1,0 +1,139 @@
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.left-side{
+    background-color: #00000069;
+    width: 50%;
+    height: 100vh;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.item-right{
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+}
+.item-right .feed{
+    height: ;
+    
+    height: 35vh;
+}
+
+.item-right .bottom{
+    
+    height: 35vh;
+}
+
+.item-right .heads{
+    
+    height: 35vh;
+}
+
+ .item-right .heads .welcome {
+    display: flex;
+    width: 80%;
+    color: rgb(255, 255, 255);
+    padding-left: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #17C964;
+    margin-left: 70px;
+    margin-top: 70px;
+
+    
+}
+
+.item-right .feed .visitors {
+    display: flex;
+    width: 60%;
+    height: 8vh;
+    color: rgb(255, 255, 255);
+    padding-left: 170px;
+    border: 1px  solid;
+    border-radius: 10px;
+    background-color: #17C964;
+    margin-left: 150px;
+}
+.item-right .feed .delivery {
+    display: flex;
+    width: 60%;
+    margin-top: 4vh;
+    height: 8vh;
+    color: rgb(255, 255, 255);
+    padding-left: 170px;
+    border: 1px  solid;
+    border-radius: 10px;
+    background-color: #17C964;
+    margin-left: 150px;
+}
+
+.item-right .feed .house {
+    display: flex;
+    width: 60%;
+    height: 8vh;
+    margin-top: 4vh;
+    color: rgb(255, 255, 255);
+    padding-left: 170px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #17C964;
+    margin-left: 150px;
+    
+    
+}
+
+
+
+.item-right .heads .block .profile{
+    width: 30%;
+}
+
+
+.item-right .bottom .block {
+    display: flex;
+    width: 80%;
+    border: 1px rgb(187, 255, 0) solid;
+}
+
+.item-right .bottom {
+    display: flex;
+    width: 80%;
+    height: 8vh;
+    margin-top: 4vh;
+    color: rgb(255, 255, 255);
+    padding-left: 270px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color:red;
+    margin-left: 70px;
+}
+
+.feed .visitors .header-btn-create{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.feed .delivery .header-btn-create{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.feed .house .header-btn-create{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.bottom .header-btn-create{
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+
+
+
+
+
+

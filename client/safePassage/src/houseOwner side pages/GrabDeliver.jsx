@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../css/Grabdeliver.css'
 import grabimage from "../assets/Motorbike.png";
+import Swal from 'sweetalert2';
 
 function GrabDeliver() {
   const navigate = useNavigate()
@@ -30,7 +31,11 @@ function GrabDeliver() {
           setImage(res.data)
         })
     }else{
-      alert("please fill in all data")
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+      });
     }
   }
 
@@ -74,7 +79,7 @@ function GrabDeliver() {
 
           <input
           type="text"
-          placeholder='ชื่อของท่าน'
+          placeholder=' ชื่อ'
           className='ml-2'
           onChange={(e) => { setFirstName(e.target.value) }}
         />
@@ -82,14 +87,14 @@ function GrabDeliver() {
       
           <input
           type="text"
-          placeholder='นามสกุลของท่าน'
+          placeholder=' นามสกุล'
           className='ml-2'
           onChange={(e) => { setLastName(e.target.value) }}
         />
 
        <input
           type="text"
-          placeholder='บ้านเลขที่'
+          placeholder=' บ้านเลขที่'
           className='ml-2'
           onChange={(e) => { setHouseNo(e.target.value) }}
         />
@@ -97,7 +102,7 @@ function GrabDeliver() {
 
           <input
           type="text"
-          placeholder='ป้ายทะเบียนรถ'
+          placeholder=' ป้ายทะเบียน'
           className='ml-2'
           onChange={(e) => { setLicenseTemplate(e.target.value) }}
         />

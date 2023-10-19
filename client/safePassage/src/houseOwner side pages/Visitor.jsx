@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import visitorImage from "../assets/imagevisitor.png";
 import { useNavigate } from 'react-router-dom';
 import "../css/Visitor.css";
+import Swal from 'sweetalert2';
 
 function Visitor() {
   const navigate = useNavigate()
@@ -30,7 +31,11 @@ function Visitor() {
           setImage(res.data)
         })
     }else{
-      alert("please fill in all data")
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+      });
     }
   }
 
@@ -76,14 +81,14 @@ function Visitor() {
         
         <input
           type="text"
-          placeholder='ใส่เลขบัตรประชาชนของญาติท่าน'
+          placeholder=' ใส่เลขบัตรประชาชนของญาติ'
           className='ml-2'
           onChange={(e) => { setId(e.target.value) }}
         />
 
           <input
           type="text"
-          placeholder='ชื่อญาติ'
+          placeholder=' ชื่อญาติ'
           className='ml-2'
           onChange={(e) => { setFirstName(e.target.value) }}
         />
@@ -91,14 +96,14 @@ function Visitor() {
       
           <input
           type="text"
-          placeholder='นามสกุลญาติ'
+          placeholder=' นามสกุลญาติ'
           className='ml-2'
           onChange={(e) => { setLastName(e.target.value) }}
         />
 
        <input
           type="text"
-          placeholder='บ้านเลขที่'
+          placeholder=' บ้านเลขที่'
           className='ml-2'
           onChange={(e) => { setHouseNo(e.target.value) }}
         />
@@ -106,7 +111,7 @@ function Visitor() {
 
           <input
           type="text"
-          placeholder='ป้ายทะเบียนรถ'
+          placeholder=' ป้ายทะเบียนรถ'
           className='ml-2'
           onChange={(e) => { setLicenseTemplate(e.target.value) }}
         />

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/HouseOwnerQR.css'
 import HouseOwnerimage from "../assets/houseowner.png";
 import HouseOwnerimage1 from "../assets/Logo Black with Name.png";
+import Swal from 'sweetalert2';
 
 function HouseOwner() {
   const navigate = useNavigate()
@@ -31,7 +32,11 @@ function HouseOwner() {
           setImage(res.data)
         })
     }else{
-      alert("please fill in all data")
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+      });
     }
   }
   

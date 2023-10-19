@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlackLogo from "../assets/Logo Black with Name.png";
 import "../css/HouseOwner.css";
+import Swal from 'sweetalert2';
 
 function HouseOwnerLogin() {
 
@@ -28,7 +29,11 @@ function HouseOwnerLogin() {
         }
       })
     } else {
-      alert('pleas fill in username and password.')
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'กรุณากรอก Username และ Pasword',
+      });
     }
   }
 

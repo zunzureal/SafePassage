@@ -1,5 +1,7 @@
 .House-backgound{
     background-color: #ae7d2869;
+    width: 100%;    
+    height: 100vh; 
 }
 .House-container{
     display: flex;
@@ -12,8 +14,8 @@
 .leftsideH{
     justify-content: center;
     align-content: center;
-    width: 806px;
-    height: 739;
+    width: 50%;
+    height: 100%;
 }
 .textsignH p{
     text-align: center;
@@ -27,7 +29,7 @@
 .imageHouse{
     width: 270px;
     height: 175px;
-    margin-left: 33%;
+    transform: translateX(125%);
 }
 
 .imageHouse img{
@@ -42,18 +44,18 @@
     width: 300px;
     height: 300px;
     border: solid 0.5px black;
-    transform: translateX(84.5%);
+    transform: translateX(105%);
     margin-bottom: 20px;
-    margin-top: 13%;
+    margin-top: 15%;
     background-color: aqua;
 }
 
 .rightsideH{
     display: flex;
     flex-direction: column;
-    height: 739px;
+    height: 100%;
     border-radius: 25px;
-    width: 729px;
+    width: 50%;
 }
 
 .signupH{

@@ -73,7 +73,7 @@ function HouseOwner() {
             <form>
               <div className='summit3'>
                 <button className='ml-2' onClick={submitBtn}>
-                <span>Generate QRcode</span>
+                <span>QR code</span>
                 </button>
               </div>
 

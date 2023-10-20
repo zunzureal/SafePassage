@@ -72,6 +72,7 @@ function GrabDeliver() {
       </div>
        
         <div className='formerG'>
+        <div className='formmargin'>
         <form>
 
 
@@ -105,6 +106,7 @@ function GrabDeliver() {
           onChange={(e) => { setLicenseTemplate(e.target.value) }}
         />
         <br />
+        
 
         <div className='summit2'>
           <button className='ml-2' onClick={submitBtn}>
@@ -115,7 +117,7 @@ function GrabDeliver() {
        </form>
        </div>
        </div>
-
+       </div>
       </div>
     </div> 
   )

@@ -13,10 +13,11 @@
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
     background-color: #ffff;
+    max-height: 100vh;
 }
 
 header {
-    height: 1110px;
+    height: 100vh;
     background-position: right -150px bottom 350px;
     
 }
@@ -34,12 +35,12 @@ header {
 
 
 .header-info {
-    margin-top: 50px;
+
     width: 540px;
     
 }
 
-.header-or {    
+.header-or {
     margin-top: 20px;
     display: flex;
     justify-content: center; /* Center horizontally */

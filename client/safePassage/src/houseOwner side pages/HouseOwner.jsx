@@ -1,38 +1,33 @@
-import React ,{useState,useEffect}from 'react'
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/HouseOwnerQR.css'
-import HouseOwnerimage from "../assets/houseowner.png";
 import HouseOwnerimage1 from "../assets/Logo Black with Name.png";
+import HouseOwnerimage from "../assets/houseowner.png";
+import '../css/HouseOwnerQR.css';
 
 function HouseOwner() {
   const navigate = useNavigate()
-  const [id, setId] = useState('')
-  const [houseNo, setHouseNo] = useState('');
   const type = "houseOwner";
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [licenseTemplate, setLicenseTemplate] = useState('')
   const [image, setImage] = useState('');
 
   const token = localStorage.getItem('token');
-    
+  const password = localStorage.getItem('password');
+  const username = localStorage.getItem('username');
+
+
     useEffect(()=>{
         if(!token){
             navigate('/houseowner/login')
         }
     },[])
+
   const submitBtn = (e) => {
     e.preventDefault();
-    if (null) {
-      axios.post('http://localhost:4444/genQR',
-        {  })
-        .then(res => {
-          setImage(res.data)
-        })
-    }else{
-      alert("please fill in all data")
-    }
+    axios.post('http://localhost:4444/houseOwnerGenQr',{
+      username, password
+    }).then(res=>{
+      setImage(res.data)
+    })
   }
   
   return (
@@ -42,14 +37,13 @@ function HouseOwner() {
 
         <div className='leftsideH'>
         
-          <div className='textsignH'><p>Delivery</p></div>
+          <div className='textsignH'><p>House Owner</p></div>
           <div className='imageHouse'><img src={HouseOwnerimage} height= "100%"  width= "100%"/></div>
           <div className='qrcodeH'><img src={image} width="300px"  height="300px" alt="" /></div>
       
         </div>
       
         <div className='rightsideH' >
-       
           <div className='signupH'>
             <img src={HouseOwnerimage1} alt='' />
         
@@ -65,7 +59,7 @@ function HouseOwner() {
             <button>
             <img src='https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png' alt=''/> <span>GOOGLE</span>
             </button>
-            </div> 
+            </div>
             </div>*/}
           </div>
        

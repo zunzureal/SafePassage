@@ -2,34 +2,34 @@
 .container{
     display: flex;
     width: 50%;
-    height: 925px;
     transform: translateX(-100px);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    background: #6c6c6c56
+    background: #6c6c6c56;
+    height: 100vh;
 }
 
 .left-side2{
     background-color: #00000067;
     width: 50%;
-    height: 925px;
+    height: 100vh;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
 .item-right{
     background-color: white;
     width: 50%;
-    height: 925px;
+    height: 100vh;
 }
 .item-right .feed{
 
     width: 805px;
-    height: 370px;
+    height: 35vh;
     padding-top: 50px;
 }
 
 .item-right .bottom{
-    
+    margin-top: 20vh;
     height: 45vh;
 }
 
@@ -73,7 +73,7 @@
     border-radius: 10px;
     background-color: #17C964;
     margin-left: 215px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .item-right .feed .house {
@@ -86,7 +86,7 @@
     border-radius: 10px;
     background-color: #17C964;
     margin-left: 215px;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 

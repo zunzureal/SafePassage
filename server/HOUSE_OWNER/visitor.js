@@ -6,7 +6,6 @@ const bcrypt = require('bcrypt');
 const qrcode = require('qrcode');
 const dbHost = process.env.HOST;
 const dbPassword = process.env.PASSWORD;
-
 const connection = async ()=>{
     const db = await mysql.createConnection({
         user:"admin",
@@ -16,7 +15,6 @@ const connection = async ()=>{
     })
     return db;
 };
-
 //Receive and insert visitor that houseOwner fill in data
 visitor.post('/genQR',async (req, res)=>{
     try{
@@ -39,5 +37,4 @@ visitor.post('/genQR',async (req, res)=>{
         console.log(err)
     }
 });
-
 module.exports = visitor;

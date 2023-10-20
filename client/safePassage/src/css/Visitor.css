@@ -32,8 +32,9 @@
     }
 
     .imagevisitor{
-        width: 300px;
-        height: 200px;
+        width: 350px;
+        height: 186px;
+        transform: translateX(-45%) translateY(-20%);
     }
 
     .imagevisitor img{
@@ -49,7 +50,7 @@
         width: 300px;
         height: 300px;
         border: solid 0.5px black;
-        transform: translateX(100%);
+        transform: translateX(70%);
         margin-bottom: 20px;
         margin-top: 13%;
         background-color: aqua;
@@ -74,7 +75,7 @@
 
     .signup p{
         margin-top: 20px;
-        font-size: larger;
+        font-size: 50px;
     }
 
     .signup1{
@@ -141,33 +142,35 @@
     .former{
         background-color: #ebe3e3;
         height: 100%;
-        width: 100%;
         border-bottom-left-radius: 30px;
+    }
+
+    .formmarginV{
+        margin-top: 10%;
     }
     
     .former input{
         display: flex;
         flex-direction: column;
         margin-top: 6.2%;
-        transform: translateX(140%);
+        transform: translateX(30%);
         height: 50px;
-        width: 250px;
+        width: 450px;
         border-radius: 10px;
     }
 
     .summit1{
-        justify-content: center;
-        align-content: center;
-        text-align: center;
+        margin-left: 42%;
         margin-top: 5%;
         margin-bottom: 5%;
+        transform: translateX(-6%);
     }
 
     .summit1 button{
         border-radius: 20px;
         height: 50px;
         width: 150px;
-        background-color: orange;
+        background-color: #17c964;
         box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
     }
 

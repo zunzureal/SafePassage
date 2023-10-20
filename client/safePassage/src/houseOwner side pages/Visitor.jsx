@@ -30,11 +30,12 @@ function Visitor() {
         .then(res => {
           setImage(res.data)
         })
-    }else{
+    }
+    else {
       Swal.fire({
         icon: 'error',
         title: 'ERROR',
-        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+        text: 'กรูณากรอกข้อมูลให้ครบถ้วน',
       });
     }
   }
@@ -75,6 +76,7 @@ function Visitor() {
       </div>
        
         <div className='former'>
+        <div>
         <form>
 
         
@@ -126,7 +128,7 @@ function Visitor() {
        </form>
        </div>
        </div>
-
+       </div>
       </div>
     </div> 
   )

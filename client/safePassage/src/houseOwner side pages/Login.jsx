@@ -11,18 +11,24 @@ function HouseOwnerLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const homeBtn = (e)=>{
+
+  const homeBtn = (e) => {
     e.preventDefault();
     navigate('/')
   };
-  const loginBtn = (e) => {
-    e.preventDefault();
+  const runBothFunction = async () => {
+    await passData();
+    await loginBtn();
+  }
+  const loginBtn = async (e) => {
     if (username && password) {
-      axios.post('http://localhost:4444/apis/login', {
+      await axios.post('http://localhost:4444/apis/login', {
         username, password
       }).then(res => {
         if (res.data.message === "Login successfully") {
           localStorage.setItem('token', res.data.token)
+          localStorage.setItem('houseNo', res.data.houseNo)
+          localStorage.setItem('password', res.data.password)
           navigate('/houseowner/profile')
         } else {
           alert('username or password wrong')
@@ -37,12 +43,16 @@ function HouseOwnerLogin() {
     }
   }
 
+  const passData = () => {
+
+  }
+
+
   return (
     <div className='houseowner-login-container'>
-
       <div className='desktop'>
         <div className="left-side">{/* Left-side */}
-          <img src={BlackLogo} alt="" onClick={homeBtn}/>
+          <img src={BlackLogo} alt="" onClick={homeBtn} />
         </div>
         <div className="right-side">{/* Right side */}
           <div className="header">
@@ -67,7 +77,7 @@ function HouseOwnerLogin() {
             />
           </div>
           <div className="bottom">
-            <button onClick={loginBtn}>Login</button>
+            <button onClick={runBothFunction}>Login</button>
           </div>
         </div>
       </div>
@@ -91,7 +101,7 @@ function HouseOwnerLogin() {
           />
         </div>
         <div className="bottom">
-          <button onClick={loginBtn}>Login</button>
+          <button onClick={runBothFunction}>Login</button>
         </div>
       </div>
 

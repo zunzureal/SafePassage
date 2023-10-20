@@ -1,29 +1,36 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from "../assets/Logo Black with Name.png"
-import "../css/profile.css"
+import house from "../assets/broker.png"
+import delivery from "../assets/delivery.png"
 import profile from "../assets/profile.png"
 import visitors from "../assets/tour-guide.png"
-import delivery from "../assets/delivery.png"
-import house from "../assets/broker.png"
+import "../css/profile.css"
 
 
-
-function Profile(type) {
-
-    const navigate = useNavigate()
-    const [userName, setCount] = useState('Bro')
-    const [visitorstate, setVisitorstate] = useState(false)
-    const [deliverystate, setDeliverystate] = useState(false)
-    const [houseownerstate, setHouseownerstate] = useState(false)
-
+function Profile() {
+    const navigate = useNavigate();
+    const [password, setPassword] = useState('');
     const token = localStorage.getItem('token');
+    const username = localStorage.getItem('houseNo')
+
 
     useEffect(() => {
         if (!token) {
             navigate('/houseowner/login')
         }
     }, [])
+
+    useEffect(()=>{
+        axios.get('http://localhost:4444/profile')
+        .then(res=>{
+            console.log(res.data)
+            setUsername(res.data.UserName)
+            console.log(username)
+        })
+    },[])
+
     const logoutBtn = (e) => {
         e.preventDefault();
         localStorage.setItem('token', '');
@@ -56,7 +63,7 @@ function Profile(type) {
                         </div>
                         <div className='land'>
                             <div className='ben'>welcome</div>
-                            <div >User</div>
+                            <div >{username}</div>
                         </div>
                     </div>
 

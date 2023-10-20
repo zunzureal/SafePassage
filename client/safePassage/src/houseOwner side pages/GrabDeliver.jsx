@@ -1,15 +1,13 @@
-import React ,{useState,useEffect}from 'react'
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../css/Grabdeliver.css'
 import grabimage from "../assets/Motorbike.png";
 import Swal from 'sweetalert2';
+import '../css/Grabdeliver.css';
 
 function GrabDeliver() {
   const navigate = useNavigate()
-  /*const [id, setId] = useState('')*/
   const [houseNo, setHouseNo] = useState('');
-  const type = "houseOwner";
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [licenseTemplate, setLicenseTemplate] = useState('')
@@ -24,9 +22,9 @@ function GrabDeliver() {
     },[])
   const submitBtn = (e) => {
     e.preventDefault();
-    if (houseNo && type && firstName && lastName && licenseTemplate) {
-      axios.post('http://localhost:4444/genQR',
-        { houseNo, type, firstName, lastName, licenseTemplate })
+    if (houseNo && firstName && lastName && licenseTemplate) {
+      axios.post('http://localhost:4444/grabGenQr',
+        { firstName, lastName, houseNo, licenseTemplate })
         .then(res => {
           setImage(res.data)
         })

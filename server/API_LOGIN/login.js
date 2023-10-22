@@ -13,7 +13,7 @@ const connection = async () => {
         user: "admin",
         host: dbHost,
         password: dbPassword,
-        database: "testVilla",
+        database: "Villa",
     });
     return db;
 };
@@ -21,10 +21,11 @@ login.post("/apis/login", async (req, res) => {
     try {
         const { username,password} = req.body;
         const db =await connection();
-        const [result] =await db.query('select * from AccountForOwner where UserName = ?',username);
+        const [result] =await db.query('select * from HouseOwnerLogin where UserName = ?',username);
         const data = result[0];
+        console.log(data)
         if(data){
-            const comPassword = await bcrypt.compare(password,data.Password)
+            const comPassword = await bcrypt.compare(password,data.PassWord)
             if(comPassword){
                 const token = jwt.sign(username,secret);
                 return res.json({message:"Login successfully",token:token,houseNo:username,password:password});
@@ -44,7 +45,7 @@ login.post('/securityLogin', async (req, res)=>{
     try{
         const {username, password} = req.body;
         const db = await connection();
-        const [result] = await db.query(`select * from AccountForStaff where Username = ?`,username)
+        const [result] = await db.query(`select * from SecurityGuardLogin where UserName = ?`,username)
         if(result){
             const comPassword = await bcrypt.compare(password,result[0].Password);
             if(comPassword){

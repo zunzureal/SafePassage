@@ -12,7 +12,7 @@ const connection = async ()=>{
         user:"admin",
         host:dbHost,
         password:dbPassword,
-        database:"testVilla"
+        database:"Villa"
     })
     return db;
 };
@@ -23,7 +23,8 @@ houseOwner.post('/houseOwnerGenQr',async(req,res)=>{
         const db = await connection();
         const sumPassword = username+password;
         const hashPassword = await bcrypt.hash(sumPassword, 10);
-        await db.query(`insert into QRCode(password) values(?)`,hashPassword);
+        await db.query(`insert into HouseOwnerTime(Password,HouseNumber) values(?,?)`,[hashPassword,username]);
+        await db.query(`insert into QrCode(Password) values(?)`,hashPassword);
         qrcode.toDataURL(hashPassword,function(err,data){
             res.json(data)
         })

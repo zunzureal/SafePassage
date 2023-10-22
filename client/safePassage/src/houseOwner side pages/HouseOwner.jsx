@@ -12,7 +12,7 @@ function HouseOwner() {
 
   const token = localStorage.getItem('token');
   const password = localStorage.getItem('password');
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('houseNo');
 
 
     useEffect(()=>{

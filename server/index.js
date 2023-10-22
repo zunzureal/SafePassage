@@ -9,6 +9,7 @@ const houseOwner = require('./HOUSE_OWNER/houseOwner');
 const dbHost = process.env.HOST;
 const dbPassword = process.env.PASSWORD;
 const app = express();
+const bcrypt = require('bcrypt')
 app.use((req,res,next)=>{
     next()
 });

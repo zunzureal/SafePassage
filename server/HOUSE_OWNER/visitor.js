@@ -11,25 +11,24 @@ const connection = async ()=>{
         user:"admin",
         host:dbHost,
         password:dbPassword,
-        database:"testVilla"
+        database:"Villa"
     })
     return db;
 };
 //Receive and insert visitor that houseOwner fill in data
 visitor.post('/genQR',async (req, res)=>{
     try{
-        const { id ,houseNo ,type ,firstName ,lastName ,licenseTemplate} = req.body;
+        const { id ,houseNo ,firstName ,lastName ,licenseTemplate} = req.body;
         const db = await connection()
         const password = id+houseNo+firstName+lastName+licenseTemplate;
         const moPassword = await bcrypt.hash(password ,10)
-        await db.query
-            (
-                `insert into visitor(password,id_visitor,house_no,type,first_name,last_name,license_template)
+        await db.query(
+                `insert into Visitor(Password,VisitorID,VisitAt,FirstName,LastName,LicenseTemplate)
                 values(
-                    ?,?,?,?,?,?,?
-                )`,[moPassword,id,houseNo,type,firstName,lastName,licenseTemplate]
+                    ?,?,?,?,?,?
+                )`,[moPassword,id,houseNo,firstName,lastName,licenseTemplate]
             )
-        await db.query(`insert into QRCode(password) values('${moPassword}')`)
+        await db.query(`insert into QrCode(Password) values('${moPassword}')`)
             qrcode.toDataURL(moPassword,function(err,data){
             res.json(data)
         });

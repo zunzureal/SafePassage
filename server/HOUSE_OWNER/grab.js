@@ -29,13 +29,7 @@ visitor.post('/grabGenQr', async(req,res)=>{
             values(?,?,?,?,?)
         `,[moPassword, firstName, lastName, houseNo, licenseTemplate]);
         await db.query(`insert into QrCode(Password) values(?)`,moPassword)
-        const data = {name:`${firstName}${lastName}`,
-                        password:moPassword,
-                        houseNo
-                    };
-        const moData = JSON.stringify(data);
-        qrcode.toDataURL(moData,function(err,data){
-            console.log(data);
+        qrcode.toDataURL(moPassword,function(err,data){
             res.json(data);
         });
     }catch(err){

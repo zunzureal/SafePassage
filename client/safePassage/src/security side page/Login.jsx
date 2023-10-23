@@ -51,7 +51,7 @@ function SecurityLogin() {
                     <div className="header-title">
                         <h1>Sign in</h1>
                     </div>
-                    <div className="header-btn">
+                    <div className="header-btn2">
                         <a href="#" className="with-google">Sign in with Google</a>
                         <a href="#" className="with-facebook">Sign in with Facebook</a>
                     </div>
@@ -62,7 +62,7 @@ function SecurityLogin() {
                         <input type='text' placeholder='username' onChange={(e) => { setUsername(e.target.value) }}></input>
                         <input type='text' placeholder='password' onChange={(e) => { setPassword(e.target.value) }}></input>
                     </form>
-                    <div className="header-btn-create">
+                    <div className="header-btn-create2">
                         <button className="sign-account" onClick={loginBtn}>Sign in</button>
                     </div>
 

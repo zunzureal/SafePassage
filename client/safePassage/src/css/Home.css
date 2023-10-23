@@ -69,6 +69,10 @@
   transition: 0.3s ease-in-out;
 }
 
+.SecurityLoginBTN1 {
+  border: 2px solid #1e293b;
+}
+
 @keyframes slide-left {
 0% {
   background-position: 0px;

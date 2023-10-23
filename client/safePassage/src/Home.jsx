@@ -22,20 +22,20 @@ function Home() {
             <div className='topic'>
             <div className=' flex mt-32 justify-between'>
             <div className=''>
-                <p className=' text-7xl text-slate-800'>A <span className=' font-bold'>super solution</span> <br />for your <span className=' font-bold'>business.</span> </p>
-
+                <p className=' text-7xl text-slate-800'><span className='textSafe'>Safe</span><span className=' font-bold'>Passage</span> <br /><span className='textHomeSize'>Boundless between Wireless and Security</span></p>
+                {/*
                 <div className=' my-10'>
                     <p className=' text-xl text-slate-600'>
                         Our maketing and sales automations <br />
                         help you scale your outreach to get <br />
                         more leads for your company.
                     </p>
-                </div>
+                </div>*/}
                 <div>
-                    <button onClick={securityLoginBtn} className=' SecurityLoginBTN1 bg-slate-800 text-white px-8 py-4 rounded-md'>Security</button>
+                    <button onClick={securityLoginBtn} className=' SecurityLoginBTN1 text-white px-8 py-4 rounded-md'>Security</button>
                 </div>
                 <div className='SecurityLoginBTN'>
-                    <button onClick={houseLoginBtn} className=' SecurityLoginBTN2 bg-slate-800 text-white px-8 py-4 rounded-md'>House Owner</button>
+                    <button onClick={houseLoginBtn} className=' SecurityLoginBTN2 text-white px-8 py-4 rounded-md'>House Owner</button>
                 </div>
             </div>
             <div className="w-1/2">

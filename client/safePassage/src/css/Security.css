@@ -41,7 +41,7 @@ header {
 }
 
 .header-or {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; 
@@ -60,9 +60,9 @@ header {
 }
 
 .with-google {
-    background: white;
-    color: #111B47;
-    border: 2px solid #111B47 ;
+    background: #358E4C;
+    color: white;
+    border: 2px solid #358E4C ;
     text-decoration: none;
     padding: .5rem  1.5rem;
     border-radius: 2px;
@@ -71,16 +71,37 @@ header {
 }
 
 .with-facebook {
-    color: #111B47;
-    border: 2px solid #111B47 ;
+    color: white;
+    border: 2px solid #358E4C ;
     border-radius: 2px;
-    background: white;
+    background: #358E4C;
     padding: .5rem 1.5rem;
     text-decoration: none;
 }
 
-.header-form  h3 {
+.header-btn2 {
     margin-top: 30px;
+    padding-left: 50px;
+}
+
+.header-btn-create2 {
+    margin-top: 40px;
+}
+
+.header-btn2 :hover {
+    background: white;
+    color: #111B47;
+    transition: all 0.3s ease-out;
+}
+
+.header-btn-create2 :hover {
+    background: white;
+    color: #111B47;
+    transition: all 0.3s ease-out;
+}
+
+.header-form  h3 {
+    margin-top: 35px;
 }
 
 #form{
@@ -114,17 +135,17 @@ header {
     display: flex;
     margin-top: 20px;
     justify-content: center; /* Center horizontally */
-    align-items: center; 
+    align-items: center;
 }
 
 .sign-account {
     color: white;
-    border: 2px solid #111B47 ;
+    border: 2px solid #358E4C ;
     text-decoration: none;
-    border-radius: 2px;
-    background: #111B47;
+    background: #358E4C;
     padding: .5rem 15rem;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 .marginall {

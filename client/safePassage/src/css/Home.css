@@ -60,13 +60,26 @@
 }
 
 .SecurityLoginBTN2:hover {
-  background-color: #19cf97;
-  transition: 0.3s ease-in-out;
+  background: white;
+  color: #111B47;
+  transition: all 0.3s ease-out;
 }
 
 .SecurityLoginBTN1:hover {
-  background-color: #19cf97;
-  transition: 0.3s ease-in-out;
+  background: white;
+  color: #111B47;
+  transition: all 0.3s ease-out;
+}
+
+.SecurityLoginBTN1 {
+  border: 2px solid #358E4C;
+  background: #358E4C;
+  margin-top: 50px;
+}
+
+.SecurityLoginBTN2 {
+  border: 2px solid #358E4C;
+  background: #358E4C;
 }
 
 @keyframes slide-left {
@@ -95,4 +108,13 @@
   opacity: 1;
   transform: translateX(0);
 }
+}
+
+.textSafe {
+  color: #358E4C;
+}
+
+.textHomeSize {
+  font-size: 30px;
+  font-weight: bold;
 }

@@ -5,10 +5,12 @@ import HouseOwnerimage1 from "../assets/Logo Black with Name.png";
 import HouseOwnerimage from "../assets/houseowner.png";
 import '../css/HouseOwnerQR.css';
 
+
 function HouseOwner() {
   const navigate = useNavigate()
   const type = "houseOwner";
   const [image, setImage] = useState('');
+  const [isQrCodeVisible, setIsQrCodeVisible] = useState(false);
 
   const token = localStorage.getItem('token');
   const password = localStorage.getItem('password');
@@ -27,8 +29,10 @@ function HouseOwner() {
       username, password
     }).then(res=>{
       setImage(res.data)
+      setIsQrCodeVisible(true);
     })
   }
+    
   
   return (
     <div className='House-backgound'>
@@ -37,36 +41,29 @@ function HouseOwner() {
 
         <div className='leftsideH'>
         
-          <div className='textsignH'><p>House Owner</p></div>
-          <div className='imageHouse'><img src={HouseOwnerimage} height= "100%"  width= "100%"/></div>
-          <div className='qrcodeH'><img src={image} width="300px"  height="300px" alt="" /></div>
+          <img className="houseOwner-logo" src={HouseOwnerimage1} alt='' />
+          {isQrCodeVisible ? (
+          <div className='qrcodeH'><img src={image} alt='QR Code' height="300px" width="300px"/></div>
+          ) : (
+          <div className='imageHouse'><img src={HouseOwnerimage} alt='Image House'/></div>
+          )}
       
         </div>
       
         <div className='rightsideH' >
-          <div className='signupH'>
-            <img src={HouseOwnerimage1} alt='' />
-        
-           {/*<div className='signup1'>
-        
-           <div className='github'>
-            <button>
-            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/github-7521512-7196736.png?f=webp' alt=''/> <span>GITHUB</span>
-            </button>
-            </div>
-        
-            <div className='google'>
-            <button>
-            <img src='https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png' alt=''/> <span>GOOGLE</span>
-            </button>
-            </div>
-            </div>*/}
-          </div>
+              <div className="langaugeH">
+                <select id="langauge_selectH">
+                    <option value="Eng">English(UK)</option>
+                    <option value="Eng">Thai(TH)</option>
+                    <option value="Eng">Japanese(JP)</option>
+                    <option value="Eng">Chinese(CH)</option>
+                </select>
+              </div>
        
           <div className='formerH'>
             <form>
               <div className='summit3'>
-                <button className='ml-2' onClick={submitBtn}>
+                <button className='ml-2' onClick={submitBtn} >
                 <span>Generate QRcode</span>
                 </button>
               </div>

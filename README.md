@@ -14,12 +14,7 @@ git add .
 git commit -m "First push"
 git push origin [Your_branch_name]
 ```
-cd
 
-<<<<<<< HEAD
-npm run dev
-
-=======
 ## Installation
 
 Install SafePassage with npm

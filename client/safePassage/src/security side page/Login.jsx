@@ -51,13 +51,13 @@ function SecurityLogin() {
                     <div className="header-title">
                         <h1>Sign in</h1>
                     </div>
-                    <div className="header-btn2">
+                    {/*<div className="header-btn2">
                         <a href="#" className="with-google">Sign in with Google</a>
                         <a href="#" className="with-facebook">Sign in with Facebook</a>
-                    </div>
+    </div           >
                     <div className="header-or">
                         <h3>OR</h3>
-                    </div>
+                    </div>*/}
                     <form id='form' className='flexx flexx-col'>
                         <input type='text' placeholder='username' onChange={(e) => { setUsername(e.target.value) }}></input>
                         <input type='text' placeholder='password' onChange={(e) => { setPassword(e.target.value) }}></input>

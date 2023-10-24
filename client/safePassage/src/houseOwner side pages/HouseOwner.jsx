@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HouseOwnerimage1 from "../assets/Logo Black with Name.png";
-import Swal from 'sweetalert2';
 import HouseOwnerimage from "../assets/houseowner.png";
 import '../css/HouseOwnerQR.css';
 
@@ -24,19 +23,11 @@ function HouseOwner() {
 
   const submitBtn = (e) => {
     e.preventDefault();
-    if (null) {
-      axios.post('http://localhost:4444/genQR',
-        {  })
-        .then(res => {
-          setImage(res.data)
-        })
-    }else{
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR',
-        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
-      });
-    }
+    axios.post('http://localhost:4444/houseOwnerGenQr',{
+      username, password
+    }).then(res=>{
+      setImage(res.data)
+    })
   }
   
   return (

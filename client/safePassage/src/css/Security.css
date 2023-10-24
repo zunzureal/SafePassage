@@ -13,11 +13,11 @@
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
     background-color: #ffff;
-    max-height: 100vh;
+    max-height: 100%;
 }
 
 header {
-    height: 100vh;
+    height: 300px;
     background-position: right -150px bottom 350px;
     
 }
@@ -37,7 +37,7 @@ header {
 .header-info {
 
     width: 540px;
-    
+    height: 500px;
 }
 
 .header-or {
@@ -81,7 +81,7 @@ header {
 
 .header-btn2 {
     margin-top: 30px;
-    padding-left: 50px;
+    padding-left: 41px;
 }
 
 .header-btn-create2 {

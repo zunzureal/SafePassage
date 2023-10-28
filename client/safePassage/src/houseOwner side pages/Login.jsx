@@ -23,7 +23,7 @@ function HouseOwnerLogin() {
   }
   const loginBtn = async (e) => {
     if (username && password) {
-      await axios.post('http://localhost:4444/apis/login', {
+      await axios.post('mysql-sgp1-89426.DATABASE_URL' , {
         username, password
       }).then(res => {
         if (res.data.message === "Login successfully") {

@@ -14,7 +14,7 @@ function SecurityLogin() {
 
     const loginBtn = () => {
         if (username && password) {
-            axios.post('http://localhost:4444/securityLogin', {
+            axios.post('db-mysql-sgp1-89426.DATABASE_URL', {
                 username, password
             }).then(res => {
                 if (res.data.message === "Login successfully") {

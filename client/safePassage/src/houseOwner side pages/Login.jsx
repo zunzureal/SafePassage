@@ -23,7 +23,7 @@ function HouseOwnerLogin() {
   }
   const loginBtn = async (e) => {
     if (username && password) {
-      await axios.post('hammerhead-app-3znwj.ondigitalocean.app/apis/login' , {
+      await axios.post('https://hammerhead-app-3znwj.ondigitalocean.app/apis/login' , {
         username, password
       }).then(res => {
         if (res.data.message === "Login successfully") {

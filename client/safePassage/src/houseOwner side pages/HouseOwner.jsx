@@ -10,7 +10,7 @@ function HouseOwner() {
   const navigate = useNavigate()
   const type = "houseOwner";
   const [image, setImage] = useState('');
-  const [isQrCodeVisible, setIsQrCodeVisible] = useState(false);
+  const [isQrCodeVisibleH, setIsQrCodeVisibleH] = useState(false);
 
   const token = localStorage.getItem('token');
   const password = localStorage.getItem('password');
@@ -29,7 +29,7 @@ function HouseOwner() {
       username, password
     }).then(res=>{
       setImage(res.data)
-      setIsQrCodeVisible(true);
+      setIsQrCodeVisibleH(true);
     })
   }
     
@@ -42,7 +42,7 @@ function HouseOwner() {
         <div className='leftsideH'>
         
           <img className="houseOwner-logo" src={HouseOwnerimage1} alt='' />
-          {isQrCodeVisible ? (
+          {isQrCodeVisibleH ? (
           <div className='qrcodeH'><img src={image} alt='QR Code' height="300px" width="300px"/></div>
           ) : (
           <div className='imageHouse'><img src={HouseOwnerimage} alt='Image House'/></div>
@@ -51,14 +51,6 @@ function HouseOwner() {
         </div>
       
         <div className='rightsideH' >
-              <div className="langaugeH">
-                <select id="langauge_selectH">
-                    <option value="Eng">English(UK)</option>
-                    <option value="Eng">Thai(TH)</option>
-                    <option value="Eng">Japanese(JP)</option>
-                    <option value="Eng">Chinese(CH)</option>
-                </select>
-              </div>
        
           <div className='formerH'>
             <form>
@@ -74,8 +66,29 @@ function HouseOwner() {
         </div>
 
       </div>
+      <div className="House-mobile">
+        <div className="house-bar-mobile">
+          <img className="houseOwner-logo-moblie" src={HouseOwnerimage1} alt='' />
+          <p>HOUSE OWNER</p>
+        </div>
+        <div className="house-qr-mobile">
+        {isQrCodeVisibleH ? (
+          <div className='qrcodeH'><img src={image} alt='QR Code' height="300px" width="300px"/></div>
+          ) : (
+          <div className='imageHouse'><img src={HouseOwnerimage} alt='Image House'/></div>
+          )}
+        </div>
+          <div className='formerH-mobile'>
+            <form>
+              <div className='summit3'>
+                <button className='ml-2' onClick={submitBtn} >
+                <span>Generate QRcode</span>
+                </button>
+              </div>
+            </form>
+          </div>
+      </div>
     </div> 
   )
 }
-
 export default HouseOwner

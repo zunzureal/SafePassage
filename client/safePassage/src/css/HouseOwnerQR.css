@@ -1,3 +1,6 @@
+.House-mobile{
+    display: none;
+}
 .House-container{
     display: flex;
     width: 100%;    
@@ -5,8 +8,6 @@
 }
 
 .leftsideH{
-    justify-content: center;
-    align-content: center;
     width: 50%;
     height: 100%;
 }
@@ -14,7 +15,6 @@
 .houseOwner-logo{
     height: 93px;
     width: 177px;
-    margin-top: 3%;
     margin-left: 10%;
 }
 .textsignH p{
@@ -52,22 +52,6 @@
     width: 50%;
 }
 
-.langaugeH{
-    border: solid 0.5px black;
-    margin-left: 65%;
-    margin-top: 7%;
-    width: 125px;
-    height: auto;
-}
-.langauge_selectH {
-    color: #000;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
 .formerH{
     background-color: white;
     height: 100%;
@@ -77,7 +61,7 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    margin-top: 28%;
+    margin-top: 36%;
     margin-bottom: 5%;
 }
 
@@ -94,4 +78,57 @@
     margin-top: 5px;
     margin-right: 5px;
     font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+    .House-container{
+        display : none;
+    }
+    .House-mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .house-bar-mobile{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+    }
+    .house-bar-mobile p{
+        color: #17c964;
+        margin-left: 10%;
+        margin-top: 15%;
+        font-weight: 1000;
+    }
+    .houseOwner-logo-moblie {
+        width: 200px;
+        height: 150px;
+    }
+    .house-qr-mobile{
+        height: 450px;
+    }
+    .qrcodeH{
+        margin-left: -37%;
+        width: 300px;
+        height: 300px;
+        margin-top: 30%;
+    }
+    .imageHouse{
+        width: 250px;
+        height: 500px;
+        margin-left: 18%;
+        margin-top: 30%;
+    }
+    .summit3{
+        text-align: center;
+        margin-left: -3%;
+        height: 315px;
+        margin-top: 10%;
+    }
+    .summit3 button{
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+    }
 }

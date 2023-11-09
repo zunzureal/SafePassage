@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import visitorImage from "../assets/imagevisitor.png";
+import visitorImage from "../assets/Visitors 1.png";
+import visitorImage1 from "../assets/Logo Black with Name.png";
 import { useNavigate } from 'react-router-dom';
 import "../css/Visitor.css";
 import Swal from 'sweetalert2';
@@ -14,6 +15,7 @@ function Visitor() {
   const [lastName, setLastName] = useState('');
   const [licenseTemplate, setLicenseTemplate] = useState('')
   const [image, setImage] = useState('');
+  const [isQrCodeVisibleV, setIsQrCodeVisibleV] = useState(false);
 
   const token = localStorage.getItem('token');
     
@@ -29,6 +31,7 @@ function Visitor() {
         { id, houseNo, type, firstName, lastName, licenseTemplate })
         .then(res => {
           setImage(res.data)
+          setIsQrCodeVisibleV(true);
         })
     }
     else {
@@ -46,51 +49,31 @@ function Visitor() {
       
       <div className='visitor-container'>
 
-      <div className='leftside'>
-        
-        <div className='textsign'><p>Visitor</p></div>
-        <div className='imagevisitor'><img src={visitorImage} height= "100%"  width= "100%"/></div>
-        <div className='qrcode'><img src={image} width="300px"  height="300px" alt="" /></div>
+      <div className='leftsideV'>
+          <img className="visitor-logo" src={visitorImage1} alt='' />
+          {isQrCodeVisibleV ? (
+          <div className='qrcodeV'><img src={image} alt='QR Code' height="300px" width="300px"/></div>
+          ) : (
+          <div className='imagevisitor'><img src={visitorImage} alt='Image grab'/></div>
+          )}
       
       </div>
       
-      <div className='rightside' >
+      <div className='rightsideV' >
        
-       <div className='signup'>
-       <p>Sign up</p>
-        
-        {/*<div className='signup1'>
-        
-         <div className='github'>
-          <button>
-            <img src='https://cdn.iconscout.com/icon/premium/png-256-thumb/github-7521512-7196736.png?f=webp' alt=''/> <span>GITHUB</span>
-          </button>
-        </div>
-        
-        <div className='google'>
-          <button>
-            <img src='https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png' alt=''/> <span>GOOGLE</span>
-          </button>
-        </div> 
-        </div>*/} 
-      </div>
-       
-        <div className='former'>
-        <div>
+        <div className='formerV'>
         <form>
 
-        
-        
         <input
           type="text"
-          placeholder=' ใส่เลขบัตรประชาชนของญาติ'
+          placeholder='ใส่เลขบัตรประชาชนของญาติ'
           className='ml-2'
           onChange={(e) => { setId(e.target.value) }}
         />
 
           <input
           type="text"
-          placeholder=' ชื่อญาติ'
+          placeholder='ชื่อญาติ'
           className='ml-2'
           onChange={(e) => { setFirstName(e.target.value) }}
         />
@@ -98,14 +81,14 @@ function Visitor() {
       
           <input
           type="text"
-          placeholder=' นามสกุลญาติ'
+          placeholder='นามสกุลญาติ'
           className='ml-2'
           onChange={(e) => { setLastName(e.target.value) }}
         />
 
        <input
           type="text"
-          placeholder=' บ้านเลขที่'
+          placeholder='บ้านเลขที่'
           className='ml-2'
           onChange={(e) => { setHouseNo(e.target.value) }}
         />
@@ -113,7 +96,7 @@ function Visitor() {
 
           <input
           type="text"
-          placeholder=' ป้ายทะเบียนรถ'
+          placeholder='ป้ายทะเบียนรถ'
           className='ml-2'
           onChange={(e) => { setLicenseTemplate(e.target.value) }}
         />
@@ -128,6 +111,67 @@ function Visitor() {
        </form>
        </div>
        </div>
+      </div>
+      <div className="visitor-mobile">
+        <div className="visitor-bar-mobile">
+          <img className="visitor-logo-moblie" src={visitorImage1} alt='' />
+          <p>VISITOR</p>
+        </div>
+        <div className="visitor-qr-mobile">
+          {isQrCodeVisibleV ? (
+          <div className='qrcodeV'><img src={image} alt='QR Code' height="200px" width="200px"/></div>
+          ) : (
+          <div className='imagevisitor'><img src={visitorImage} alt='Image grab'/></div>
+          )}
+        </div>
+        <div className='formerV-mobile'>
+        <form>
+
+        <input
+          type="text"
+          placeholder='ใส่เลขบัตรประชาชนของญาติ'
+          className='ml-2'
+          onChange={(e) => { setId(e.target.value) }}
+        />
+
+          <input
+          type="text"
+          placeholder='ชื่อญาติ'
+          className='ml-2'
+          onChange={(e) => { setFirstName(e.target.value) }}
+        />
+
+      
+          <input
+          type="text"
+          placeholder='นามสกุลญาติ'
+          className='ml-2'
+          onChange={(e) => { setLastName(e.target.value) }}
+        />
+
+       <input
+          type="text"
+          placeholder='บ้านเลขที่'
+          className='ml-2'
+          onChange={(e) => { setHouseNo(e.target.value) }}
+        />
+
+
+          <input
+          type="text"
+          placeholder='ทะเบียนรถ'
+          className='ml-2'
+          onChange={(e) => { setLicenseTemplate(e.target.value) }}
+        />
+        <br />
+
+        <div className='summit1'>
+          <button className='ml-2' onClick={submitBtn}>
+          <span>Submit</span>
+          </button>
+        </div>
+
+       </form>
        </div>
       </div>
     </div> 

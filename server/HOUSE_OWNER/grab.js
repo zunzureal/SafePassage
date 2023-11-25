@@ -20,14 +20,14 @@ const connection = async ()=>{
 
 visitor.post('/grabGenQr', async(req,res)=>{
     try{
-        const {firstName, lastName, houseNo, licenseTemplate} = req.body;
+        const {deliveryID, houseNo, licenseTemplate, selectedOption} = req.body;
         const db = await connection();
-        const password = firstName+lastName+houseNo+licenseTemplate;
+        const password = deliveryID+houseNo+licenseTemplate+selectedOption;
         const moPassword = await bcrypt.hash(password,10);
         await db.query(`
-            insert into GrabDeliver(Password,FirstName,LastName,HouseNumber, LicenseTemplate)
+            insert into GrabDeliver(Password,DeliveryID,DeliveryAt,LicenseTemplate, Company)
             values(?,?,?,?,?)
-        `,[moPassword, firstName, lastName, houseNo, licenseTemplate]);
+        `,[moPassword, deliveryID, houseNo, licenseTemplate, selectedOption]);
         await db.query(`insert into QrCode(Password) values(?)`,moPassword)
         qrcode.toDataURL(moPassword,function(err,data){
             res.json(data);

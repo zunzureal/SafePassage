@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import BlackLogo from "../assets/Logo Black with Name.png";
-import "../css/HouseOwner.css";
 import Swal from 'sweetalert2';
+import BlackLogo from "../assets/Logo Black with Name.png";
+import WhiteLogo from "../assets/Logo White with Name.png";
+import "../css/HouseOwner.css";
 
 function HouseOwnerLogin() {
 
@@ -84,7 +85,7 @@ function HouseOwnerLogin() {
 
       <div className='mobile'>
         <div className="header" onClick={homeBtn}>
-          <img src={BlackLogo} alt="Logo" />
+          <img src={WhiteLogo} alt="Logo" />
         </div>
         <div className="input">
           <p>Username</p>

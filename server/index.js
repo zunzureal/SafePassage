@@ -15,16 +15,8 @@ app.use((req,res,next)=>{
 });
 app.use(express.json());
 app.use(cors({}));
-const connection = async ()=>{
-    const db = await mysql.createConnection({
-        user:"admin",
-        host:dbHost,
-        password:dbPassword,
-        database:"Villa"
-    })
-    return db;
-};
-/* const password = '427517527safepassage'
+
+/* const password = '1122334455667'
 async function hash (){
     console.log(await(bcrypt.hash(password,10)))
 }

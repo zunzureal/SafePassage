@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from "../assets/Logo Black with Name.png"
 import house from "../assets/broker.png"
-import delivery from "../assets/delivery.png"
+import delivery from "../assets/removal.png" //! this one
 import profile from "../assets/profile.png"
-import visitors from "../assets/tour-guide.png"
+import visitors from "../assets/Visitors 1.png" //! this one
 import "../css/profile.css"
+import home from "../assets/houses.png"  //! this one
+import triangle from "../assets/triangle.png"  //!this one
 
 
 function Profile() {
@@ -22,14 +24,14 @@ function Profile() {
         }
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get('http://localhost:4444/profile')
-        .then(res=>{
-            console.log(res.data)
-            setUsername(res.data.UserName)
-            console.log(username)
-        })
-    },[])
+            .then(res => {
+                console.log(res.data)
+                setUsername(res.data.UserName)
+                console.log(username)
+            })
+    }, [])
 
     const logoutBtn = (e) => {
         e.preventDefault();
@@ -50,64 +52,144 @@ function Profile() {
     }
 
     return (
-        <div className="container">
-            <div className="left-side2">
-                <img src={logo} alt="" />
+        <div className="profile-container">
+            <div className='profile-desktop'>
+                <div className="left-side2">
+                    <img src={logo} alt="" width="200px" height="200px" />
+                    <img src={home} alt="" />
+                </div>
+                <div className="item-right">
+                    <div className="heads">
+                        <div className='welcome'>
+                            <div className='profile'>
+                                <img src={profile} className='profilepicture' /> <br></br>
+                            </div>
+                            <div className='land'>
+                                <div className='ben'>Welcome</div>
+                                <div> <span>User </span>{username}</div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div className='feed'>
+                        <div className='visitors' onClick={visitorClick}>
+                            <div className='visitors-img'>
+                                <img src={visitors} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="30px" height="30px" /> <br></br>
+                            </div>
+                            <div className="header-btn-create">
+                                <a href="#" className="visitorstext">Visitors</a>
+
+                            </div>
+                        </div>
+
+                        <div className='delivery' onClick={deliveryClick}>
+                            <div className='delivery-img'>
+                                <img src={delivery} alt="" width="60px" height="60px" /> <br></br>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="30px" height="30px" /> <br></br>
+                            </div>
+                            <div className="header-btn-create">
+                                <a href="#" className="logout-account">Delivery</a>
+                            </div>
+                        </div>
+
+                        <div className='house' onClick={houseownerClick}>
+                            <div className='house-img'>
+                                <img src={house} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="30px" height="30px" /> <br></br>
+                            </div>
+                            <div className="header-btn-create">
+                                <a href="#" className="logout-account">House Owner</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className='bottom'>
+                        <button className="header-btn-create" onClick={logoutBtn} >logout</button>
+                    </div>
+                </div>
             </div>
-            <div className="item-right">
-                <div className="heads">
-                    <div className='welcome'>
-                        <div className='profile'>
-                            <img src={profile} className='profilepicture' /> <br></br>
-                        </div>
-                        <div className='land'>
-                            <div className='ben'>welcome</div>
-                            <div >{username}</div>
-                        </div>
+            <div className="profile-mobile">
+
+                <div className="top">
+                    <div>
+                        <img src={logo} alt="" width="190px" height="190px" />
+                    </div>
+                    <div className="right">
+                        PROFILE
+                    </div>
+
+
+                </div>
+
+                <div className="middle">
+                    <div className="houre-img">
+                        <img src={home} alt="" width="400px" height="400px" />
                     </div>
 
                 </div>
-                <div className='feed'>
-                    <div className='visitors' onClick={visitorClick}>
-                        <div className='visitors-img'>
-                            <img src={visitors} alt="" width="50px" height="50px" /> <br></br>
-                        </div>
-                        <div className="header-btn-create">
-                            <a href="#" className="visitorstext">Visitors</a>
 
+                <div className="bottom">
+                    <div className="welcome">
+                        <div className='profile-img'>
+                            <img src={profile} width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
+                            <div className='land'>
+                                <div className='ben'>Welcome</div>
+                                <div className="mith"> <span style={{ color: "white" }}>User </span>{username}</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className='delivery' onClick={deliveryClick}> 
-                        <div className='delivery-img'>
-                            <img src={delivery} alt="" width="50px" height="50px" /> <br></br>
+                    <div className="visitors">
+                        <div className="visitors-img">
+                            <img src={visitors} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
+                            <div className="visitors-create">
+                                <a href="#" className="visitorstext">Visitors</a>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="20px" height="20px" /> <br></br>
+                            </div>
                         </div>
-                        <div className="header-btn-create">
-                        <a href="#" className="logout-account">Delivery</a>
+
+                    </div>
+
+
+                    <div className="delivery">
+                        <div className="delivery-img">
+                            <img src={delivery} alt="" width="65px" height="65px" /> <br></br>
+                            <div className="delivery-create">
+                                <a href="#" className="logout-account">Delivery</a>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="20px" height="20px" /> <br></br>
+                            </div>
                         </div>
                     </div>
 
-                    <div className='house' onClick={houseownerClick}>
-                        <div className='house-img'>
-                            <img src={house} alt="" width="50px" height="50px" /> <br></br>
-                        </div>
-                        <div className="header-btn-create">
-                            <a href="#" className="logout-account">House Owner</a>
 
+                    <div className="house">
+                        <div className="house-img">
+                            <img src={house} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
+                            <div className="house-create">
+                                <a href="#" className="logout-account">House Owner</a>
+                            </div>
+                            <div className='triangle-img'>
+                                <img src={triangle} alt="" width="20px" height="20px" /> <br></br>
+                            </div>
                         </div>
                     </div>
 
+                    <div className="logout">
+                        <button className="logout-create" onClick={logoutBtn} >Logout</button>
+                    </div>
                 </div>
-                <div className='bottom'>
-
-                    <div className="header-btn-create"onClick={logoutBtn} >
-                        <a href="#" className="logout-account">Logout</a>
-
-                    </div>
-                </div>
-
-
             </div>
 
         </div>
@@ -120,38 +202,3 @@ function Profile() {
     )
 }
 export default Profile
-
-/* 
-<div className='select'>
-            <div className='status'>
-                <div className='Profile'>
-                    <img src="" alt="" />
-                    <p className='welcome'>Welcome <span className='userName font-bold text-lg'> {userName} </span> </p>
-                </div>
-            </div>
-
-            <div
-                className={visitorstate ? "hover-visitor" : "visitor"}
-                onMouseEnter={() => { setVisitorstate(true) }}
-                onMouseLeave={() => { setVisitorstate(false) }}
-            >
-                <button onClick={visitorClick}> Visitor </button>
-            </div>
-
-            <div
-                className={deliverystate ? "hover-delivery" : "delivery"}
-                onMouseEnter={() => { setDeliverystate(true) }}
-                onMouseLeave={() => { setDeliverystate(false) }}>
-                <button onClick={deliveryClick} > Delivery </button>
-            </div>
-
-            <div
-                className={houseownerstate ? "hover-houseowner" : "houseowner"}
-                onMouseEnter={() => { setHouseownerstate(true) }}
-                onMouseLeave={() => { setHouseownerstate(false) }}>
-                <button onClick={houseownerClick} > House Owner </button >
-            </div>
-
-            <button onClick={logoutBtn}>Logout</button>
-        </div>
-*/

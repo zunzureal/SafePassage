@@ -1,26 +1,45 @@
-import React from 'react'
-import '../css/GoodDeliver.css';
+import axios from 'axios';
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import Logo_safapassage from "../assets/Logo Black with Name.png";
-import SCG_profile from "../assets/personSEG.png";
 import Logo_Goodde from "../assets/goodepic.png";
-//import Swal from 'sweetalert2';
-
-
-/*Swal.fire({
-  icon: 'error',
-  title: 'ERROR',
-  text: 'กรูณากรอกข้อมูลให้ครบถ้วน',
-});*/
-
-
+import SCG_profile from "../assets/personSEG.png";
+import '../css/GoodDeliver.css';
 
 function GoodsDeliver() {
+
+  const [id, setId] = useState("");
+  const [licenseTemplate, setLicenseTemplate] =useState("");
+  const guardId = localStorage.getItem("GuardId")
+
+  const submit = async () => {
+    if (id === "" || licenseTemplate ==="") {
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'กรูณากรอกข้อมูลให้ครบถ้วน',
+      });
+    }else{
+      await axios.post("http://localhost:4444/goodsDelivery/genQr",{
+        id,licenseTemplate,guardId
+      }).then(res=>{
+        setId("")
+        setLicenseTemplate("")
+        Swal.fire({
+          icon:"success",
+          title:"Success",
+          text:"Success"
+        })
+      })
+    }
+  }
+
   return (
-    
+
     <div className='all-good'>
       <div className='topbar'>
-        
-        
+
+
         <div className='topbar_block1'>
           <img src={Logo_safapassage} className='topbar_Logo'></img>
         </div>
@@ -33,35 +52,37 @@ function GoodsDeliver() {
           <img src={SCG_profile} className='show_user'></img>
           <h1 className='topbar_text_user' >Chinnaphon Tharawiwit</h1>
         </div>
-        
+
       </div>
       <div className='body_flex'>
         <div className='body_left'>
           <div className='form_location'>
-            
-            <label for = 'Person_ID' className='space'>Person ID</label>
-              
-            
+
+            <p className='space'>Person ID</p>
+
+
             <input
               className='input_type-text'
               type="text"
               placeholder='xxxxxxxxxxxxx'
               name='Person_ID'
+              onChange={(e)=>setId(e.target.value)}
             />
-            
-            <label for = 'LicenseTemplate' className='space'>License Template</label>
-            
+
+            <p className='space'>License Template</p>
+
             <input
               className='input_type-text'
               type="text"
               placeholder='กข 1234'
               name='LicenseTemplate'
+              onChange={(e)=>setLicenseTemplate(e.target.value)}
             />
-            
+
 
             <div className="Entry_button">
-              <button>Entry</button>
-            
+              <button onClick={submit}>Entry</button>
+
             </div>
 
           </div>
@@ -74,7 +95,7 @@ function GoodsDeliver() {
           </div>
         </div>
       </div>
-        
+
 
     </div>
   )

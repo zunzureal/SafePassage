@@ -26,7 +26,7 @@ function Visitor() {
     },[])
   const submitBtn = (e) => {
     e.preventDefault();
-    if (id && houseNo && type && firstName && lastName && licenseTemplate) {
+    if (!(id==='' || houseNo==='' || type==='' || firstName==='' || lastName==='' || licenseTemplate==='')) {
       if(id.length>13 || id.length<13){
         Swal.fire({
           icon:"error",

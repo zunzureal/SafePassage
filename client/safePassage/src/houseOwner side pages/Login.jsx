@@ -85,7 +85,7 @@ function HouseOwnerLogin() {
 
       <div className='mobile'>
         <div className="header" onClick={homeBtn}>
-          <img src={WhiteLogo} alt="Logo" />
+          <img src={BlackLogo} alt="Logo" />
         </div>
         <div className="input">
           <p>Username</p>

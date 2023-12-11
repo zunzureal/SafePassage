@@ -49,7 +49,7 @@ function Home() {
                         <img src={url} alt="" className=''/>
                     </div>
                     <div className='h-1/5'>
-                        <button className='button mt-8 ml-9'>House owner</button>
+                        <button className='button mt-8 ml-9' onClick={houseLoginBtn}>House owner</button>
                     </div>
                 </div>
             </div>

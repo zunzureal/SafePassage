@@ -22,8 +22,6 @@
     .desktop .right-side{
         width: 100%;
         background: #ffffff;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
         transform: translateX(100px);
     }
     .desktop .right-side .header{
@@ -69,9 +67,9 @@
     }
 
     .LoginLogoHouse {
-        width: 100%;
-        height: auto;
-        transform: translateY(325px);
+        width: auto;
+        height: 300px;
+        transform: translateY(150px);
     }
 
 

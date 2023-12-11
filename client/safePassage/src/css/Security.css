@@ -10,7 +10,7 @@
 
 
 .containerSecurity {
-    max-width: 1110px; /* Add 'px' units */
+   /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
     background-color: #ffff;
     max-height: 100%;
@@ -39,7 +39,7 @@ header {
 
     width: 540px;
     height: 500px;
-    transform: translateX(550px) translateY(-170px);
+    transform: translateX(-60px) translateY(65px);
 }
 
 .header-or {
@@ -156,11 +156,11 @@ header {
 }
 
 .langauge {
-    transform: translateX(1000px) translateY(-205px);
+    transform: translateX(0%) translateY(0%);
 }
 
 .bgImage{
     width: 700px;
     height: 100px;
-    transform: translateX(-180px) translateY(-160px);
+    transform: translateX(-120px) translateY(-65px);
 }

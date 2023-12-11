@@ -140,6 +140,7 @@
     .home-page-mobile .button{
       border: 1px black solid;
       padding: 4%;
+      margin-bottom: 0%;
       background: rgb(6, 156, 6);
       border-radius: 8px;
       color: white;

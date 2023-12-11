@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2";
 import bgImage from '../assets/Data_security_.svg';
 import myImage from '../assets/safepass.png';
 import '../css/Security.css';
@@ -10,7 +11,7 @@ function SecurityLogin() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('')
 
-    localStorage.setItem("GuardId",username)
+    localStorage.setItem("GuardId", username)
 
     const loginBtn = () => {
         if (username && password) {
@@ -21,7 +22,11 @@ function SecurityLogin() {
                     localStorage.setItem('token', res.data.token);
                     navigate('/security/gooddelivery');
                 } else {
-                    alert('username or password wrong!')
+                    Swal.fire({
+                        icon: "error",
+                        Title: "Login failed!",
+                        text: "username or password is wrong!"
+                    })
                 }
             })
         } else {

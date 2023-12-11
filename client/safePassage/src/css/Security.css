@@ -9,7 +9,7 @@
 }
 
 
-.container {
+.containerSecurity {
     max-width: 1110px; /* Add 'px' units */
     margin: 0 auto; /* Center horizontally */
     background-color: #ffff;
@@ -26,7 +26,7 @@ header {
 .logo img{
     width: 18%;
     height: auto; /* Maintain aspect ratio while resizing */
-    transform: translateY(-137px);
+    transform: translateX(-120px) translateY(-137px);
 }
 
 .header-title h1 {
@@ -39,6 +39,7 @@ header {
 
     width: 540px;
     height: 500px;
+    transform: translateX(550px) translateY(-170px);
 }
 
 .header-or {
@@ -155,9 +156,11 @@ header {
 }
 
 .langauge {
-    transform: translateX(1200px) translateY(-190px);
+    transform: translateX(1000px) translateY(-205px);
 }
 
 .bgImage{
-    transform: translateX(-10px) translateY(-100px);
+    width: 700px;
+    height: 100px;
+    transform: translateX(-180px) translateY(-160px);
 }

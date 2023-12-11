@@ -14,7 +14,7 @@ function SecurityLogin() {
 
     const loginBtn = () => {
         if (username && password) {
-            axios.post('db-mysql-sgp1-89426.DATABASE_URL', {
+            axios.post('http://localhost:4444/securityLogin', {
                 username, password
             }).then(res => {
                 if (res.data.message === "Login successfully") {
@@ -31,7 +31,7 @@ function SecurityLogin() {
 
     return (
         <header className='marginall'>
-            <div className="container">
+            <div className="containerSecurity">
                 <nav>
                     <div className="logo">
                         <img src={myImage} alt="image" />

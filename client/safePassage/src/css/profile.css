@@ -5,7 +5,7 @@
     .profile-desktop{
         display: flex;
        
-        background: #6c6c6c56;
+       
         height: 100vh;
     }
     
@@ -16,11 +16,13 @@
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         margin-left: 7%;
+        transform: translateX(-50px);
     }
     .profile-desktop .item-right{
         background-color: white;
         width: 50%;
         height: 100vh;
+        transform: translateX(-90px);
     }
     .profile-desktop .item-right .feed{
     

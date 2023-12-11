@@ -23,7 +23,7 @@ function HouseOwnerLogin() {
   }
   const loginBtn = async (e) => {
     if (username && password) {
-      await axios.post('https://hammerhead-app-3znwj.ondigitalocean.app/apis/login' , {
+      await axios.post('http://localhost:4444/apis/login' , {
         username, password
       }).then(res => {
         if (res.data.message === "Login successfully") {
@@ -53,7 +53,7 @@ function HouseOwnerLogin() {
     <div className='houseowner-login-container'>
       <div className='desktop'>
         <div className="left-side">{/* Left-side */}
-          <img src={BlackLogo} alt="" onClick={homeBtn} />
+          <img className="LoginLogoHouse" src={BlackLogo} alt="" onClick={homeBtn} />
         </div>
         <div className="right-side">{/* Right side */}
           <div className="header">

@@ -1,23 +1,30 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
+    .houseowner-login-container{
+        max-width: 1110px; /* Add 'px' units */
+        margin: 0 auto; /* Center horizontally */
+        background-color: #ffff;
+        max-height: 100%;
+    }
     .mobile{
         display: none;
     }
     .desktop{
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 1100px;
         height: 100vh;
         flex:1;
-        background: #00000069
     }
     .desktop .left-side{
         width: 50%;
+        height: 1000%;
     }
     .desktop .right-side{
-        width: 50%;
+        width: 100%;
         background: #ffffff;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
+        transform: translateX(100px);
     }
     .desktop .right-side .header{
         height: 35vh;
@@ -59,6 +66,12 @@
     }
     .desktop .right-side .input input::placeholder{
         padding-left: 2%;
+    }
+
+    .LoginLogoHouse {
+        width: 100%;
+        height: auto;
+        transform: translateY(325px);
     }
 
 

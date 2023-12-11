@@ -80,9 +80,15 @@ function GoodsDeliver() {
             />
 
 
+<<<<<<< HEAD
             <div className="Entry_button">
               <button onClick={submit}>Entry</button>
 
+=======
+            <div className="Entry_button2">
+              <button className='Entry_button'>Entry</button>
+            
+>>>>>>> 58c0a4c (fixed css)
             </div>
 
           </div>

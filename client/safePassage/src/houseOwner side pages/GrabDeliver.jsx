@@ -92,7 +92,7 @@ function GrabDeliver() {
                     type="text"
                     placeholder='หมายเลขการจัดส่ง'
                     className='ml-2'
-                    onChange={(e) => { setdeliveryID(e.target.value) }}
+                    onChange={(e) => { setDeliveryID(e.target.value) }}
                   />
 
 

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -32,26 +32,35 @@ function GrabDeliver() {
   }, [])
   const submitBtn = async (e) => {
     e.preventDefault();
-    if (customOption != '') {
-      await axios.post('http://localhost:4444/grabGenQr',{
-        deliveryID,houseNo,licenseTemplate,customOption,
-      }).then(res=>{
-        setImage(res.data)
-        setIsQrCodeVisibleG(true)
-      })
-      }if(customOption === ''){
-        await axios.post('http://localhost:4444/grabGenQr',{
-          deliveryID,houseNo,licenseTemplate,selectedOption
-        }).then(res=>{
-          setImage(res.data)
-          setIsQrCodeVisibleG(true)
-        })
-      } else {
+      if(licenseTemplate==='' || selectedOption ==='' ||deliveryID==='' ||houseNo ===''){
         Swal.fire({
-          icon: 'error',
-          title: 'ERROR',
-          text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
-        });
+          icon:"error",
+          title:"Please, fill in data!",
+          text:"Please, fill in data!"
+
+        })
+      } else{
+        if (customOption != '') {
+          await axios.post('http://localhost:4444/grabGenQr',{
+            deliveryID,houseNo,licenseTemplate,customOption,
+          }).then(res=>{
+            setImage(res.data)
+            setIsQrCodeVisibleG(true)
+          })
+          }if(customOption === ''){
+            await axios.post('http://localhost:4444/grabGenQr',{
+              deliveryID,houseNo,licenseTemplate,selectedOption
+            }).then(res=>{
+              setImage(res.data)
+              setIsQrCodeVisibleG(true)
+            })
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'ERROR',
+              text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+            });
+          }
       }
     }
 
@@ -155,7 +164,7 @@ function GrabDeliver() {
                 type="text"
                 placeholder='หมายเลขจัดส่ง'
                 className='ml-2'
-                onChange={(e) => { setdeliveryID(e.target.value) }}
+                onChange={(e) => { setDeliveryID(e.target.value) }}
               />
 
 

@@ -1,14 +1,13 @@
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import logo from "../assets/Logo Black with Name.png"
+import visitors from "../assets/Visitors 1.png"; //! this one
 import house from "../assets/broker.png"
-import delivery from "../assets/removal.png" //! this one
+import home from "../assets/houses.png"; //! this one
 import profile from "../assets/profile.png"
-import visitors from "../assets/Visitors 1.png" //! this one
+import delivery from "../assets/removal.png"; //! this one
+import triangle from "../assets/triangle.png"; //!this one
 import "../css/profile.css"
-import home from "../assets/houses.png"  //! this one
-import triangle from "../assets/triangle.png"  //!this one
 
 
 function Profile() {
@@ -23,16 +22,6 @@ function Profile() {
             navigate('/houseowner/login')
         }
     }, [])
-
-    useEffect(() => {
-        axios.get('http://localhost:4444/profile')
-            .then(res => {
-                console.log(res.data)
-                setUsername(res.data.UserName)
-                console.log(username)
-            })
-    }, [])
-
     const logoutBtn = (e) => {
         e.preventDefault();
         localStorage.setItem('token', '');

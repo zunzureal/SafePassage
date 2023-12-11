@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 import React, { useEffect, useState } from 'react';
-import visitorImage from "../assets/Visitors 1.png";
-import visitorImage1 from "../assets/Logo Black with Name.png";
 import { useNavigate } from 'react-router-dom';
-import "../css/Visitor.css";
 import Swal from 'sweetalert2';
+import visitorImage1 from "../assets/Logo Black with Name.png";
+import visitorImage from "../assets/Visitors 1.png";
+import "../css/Visitor.css";
 
 function Visitor() {
   const navigate = useNavigate()
@@ -27,12 +27,20 @@ function Visitor() {
   const submitBtn = (e) => {
     e.preventDefault();
     if (id && houseNo && type && firstName && lastName && licenseTemplate) {
-      axios.post('http://localhost:4444/genQR',
+      if(id.length>13 || id.length<13){
+        Swal.fire({
+          icon:"error",
+          title:"ID is wrong!",
+          text:"Please, fill correct data."
+        })
+      }else{
+        axios.post('http://localhost:4444/genQR',
         { id, houseNo, type, firstName, lastName, licenseTemplate })
         .then(res => {
           setImage(res.data)
           setIsQrCodeVisibleV(true);
         })
+      }
     }
     else {
       Swal.fire({

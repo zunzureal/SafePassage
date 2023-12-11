@@ -147,7 +147,7 @@ function Profile() {
                         </div>
                     </div>
 
-                    <div className="visitors">
+                    <div className="visitors" onClick={visitorClick}>
                         <div className="visitors-img">
                             <img src={visitors} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
                             <div className="visitors-create">
@@ -161,7 +161,7 @@ function Profile() {
                     </div>
 
 
-                    <div className="delivery">
+                    <div className="delivery" onClick={deliveryClick}>
                         <div className="delivery-img">
                             <img src={delivery} alt="" width="65px" height="65px" /> <br></br>
                             <div className="delivery-create">
@@ -174,7 +174,7 @@ function Profile() {
                     </div>
 
 
-                    <div className="house">
+                    <div className="house" onClick={houseownerClick}>
                         <div className="house-img">
                             <img src={house} alt="" width="50px" height="50px" style={{ background: "#17C964", borderRadius: "50%" }} /> <br></br>
                             <div className="house-create">

@@ -46,7 +46,7 @@ function Visitor() {
       Swal.fire({
         icon: 'error',
         title: 'ERROR',
-        text: 'กรูณากรอกข้อมูลให้ครบถ้วน',
+        text: 'กรุณากรอกข้อมูลให้ครบถ้วน',
       });
     }
   }

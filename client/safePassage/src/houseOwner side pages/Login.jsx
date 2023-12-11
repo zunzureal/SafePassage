@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import BlackLogo from "../assets/Logo Black with Name.png";
-import WhiteLogo from "../assets/Logo White with Name.png";
 import "../css/HouseOwner.css";
 
 function HouseOwnerLogin() {
@@ -32,7 +31,11 @@ function HouseOwnerLogin() {
           localStorage.setItem('password', res.data.password)
           navigate('/houseowner/profile')
         } else {
-          alert('username or password wrong')
+          Swal.fire({
+            icon:"error",
+            Title:"Login failed!",
+            text:"username or password is wrong!"
+          })
         }
       })
     } else {

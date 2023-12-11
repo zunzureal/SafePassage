@@ -10,6 +10,8 @@ function SecurityLogin() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('')
 
+    localStorage.setItem("GuardId",username)
+
     const loginBtn = () => {
         if (username && password) {
             axios.post('http://localhost:4444/securityLogin', {
@@ -35,12 +37,6 @@ function SecurityLogin() {
                         <img src={myImage} alt="image" />
                     </div>
                     <div className="langauge">
-                        <select id="langauge_select">
-                            <option value="Eng">English(UK)</option>
-                            <option value="Eng">Thai(TH)</option>
-                            <option value="Eng">Japanese(JP)</option>
-                            <option value="Eng">Chinese(CH)</option>
-                        </select>
                     </div>
                     <div className='bgImage'>
                         <img src={bgImage} alt="background" />
@@ -60,7 +56,7 @@ function SecurityLogin() {
                     </div>*/}
                     <form id='form' className='flexx flexx-col'>
                         <input type='text' placeholder='username' onChange={(e) => { setUsername(e.target.value) }}></input>
-                        <input type='text' placeholder='password' onChange={(e) => { setPassword(e.target.value) }}></input>
+                        <input type='password' placeholder='password' onChange={(e) => { setPassword(e.target.value) }}></input>
                     </form>
                     <div className="header-btn-create2">
                         <button className="sign-account" onClick={loginBtn}>Sign in</button>

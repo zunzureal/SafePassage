@@ -112,7 +112,7 @@
         border: 1px #17C964 solid;
         background: #353738;
         color: aliceblue;
-        padding-left: 5%;
+        padding-left: -2%;
     }
     .mobile .input p{
         color: aliceblue;

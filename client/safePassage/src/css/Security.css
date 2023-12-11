@@ -39,7 +39,7 @@ header {
 
     width: 540px;
     height: 500px;
-    transform: translateX(-60px) translateY(65px);
+    transform: translateX(-110px) translateY(25px);
 }
 
 .header-or {
@@ -162,5 +162,5 @@ header {
 .bgImage{
     width: 700px;
     height: 100px;
-    transform: translateX(-120px) translateY(-65px);
+    transform: translateX(-120px) translateY(-150px);
 }

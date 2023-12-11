@@ -6,7 +6,7 @@
 }
 .topbar{
     
-    background-color: #D0F4DE;
+
     height: 120px;
     display: flex;
 
@@ -42,8 +42,8 @@
     padding-right: 5%;
     font-size: 32px;
     font-family: sans-serif;
-    text-shadow: 2px 2px gray;
     font-weight: 1000;
+    color: #17c964;
 }
 .topbar_block1{
     width: 33%;
@@ -78,7 +78,6 @@
 }
 .body_left{
     width: 50%;
-    background-color: ivory;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -87,22 +86,30 @@
 }
 .body_right{
     width: 50%;
-    background-color: #FAFFFD;
     height: 100%;
 } 
 .Entry_button{
     box-sizing: border-box;
-    border: 4px solid greenyellow;
-    outline: none;
-    border-radius: 10px;
-    width: 75px;
-    text-align: center;
-    background-color: greenyellow;
     color: white;
+    border: 4px solid #358E4C ;
+    text-decoration: none;
+    background: #358E4C;
+    padding: .5rem 15rem;
+    text-decoration: none;
+    border-radius: 20px;
+    width: 75px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-}.space{
+}
+
+.Entry_button2 :hover {
+    background: white;
+    color: #111B47;
+    transition: all 0.3s ease-out;
+}
+
+.space{
     margin-top: 6%;
     display: flex;
     flex-direction: column;

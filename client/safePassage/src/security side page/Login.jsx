@@ -31,7 +31,7 @@ function SecurityLogin() {
 
     return (
         <header className='marginall'>
-            <div className="container">
+            <div className="containerSecurity">
                 <nav>
                     <div className="logo">
                         <img src={myImage} alt="image" />

@@ -143,7 +143,7 @@ function GrabDeliver() {
           </div>
           <div className="grab-qr-mobile">
             {isQrCodeVisibleG ? (
-              <div className='qrcodeG'><img src={image} alt='QR Code' height="250px" width="250px" /></div>
+              <div className='qrcodeG'><img src={image} alt='QR Code' height="200px" width="200px" /></div>
             ) : (
               <div className='imagegrab'><img src={grabimage} alt='Image grab' /></div>
             )}

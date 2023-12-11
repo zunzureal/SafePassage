@@ -107,11 +107,11 @@
     .mobile .input{
         height: 30vh;
         padding-top: 4vh;
-        padding-left: 10%;
+        padding-left: 12%;
     }
     .mobile .input input{
         height: 5.5vh;
-        width: 90%;
+        width: 85%;
         border-radius: 8px;
         border: 3px #17C964 solid;
         /*background: #353738;*/

@@ -53,7 +53,9 @@ function HouseOwnerLogin() {
     <div className='houseowner-login-container'>
       <div className='desktop'>
         <div className="left-side">{/* Left-side */}
+          <div className="div-loginlogohouse">
           <img className="LoginLogoHouse" src={BlackLogo} alt="" onClick={homeBtn} />
+          </div>
         </div>
         <div className="right-side">{/* Right side */}
           <div className="header">

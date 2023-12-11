@@ -53,10 +53,10 @@
     }
     .desktop .right-side .input{
         height:30vh;
-        padding-left: 30%;
+        padding-left: 20%;
     }
     .desktop .right-side .input input{
-        width: 70%;
+        width: 375px;
         height: 5vh;
         border-radius: 8px;
         box-shadow: 0 0 5px rgb(0, 0, 0);
@@ -66,19 +66,23 @@
         padding-left: 2%;
     }
 
+    .div-loginlogohouse{
+        width: 750px;
+        margin-left: -20%;
+    }
     .LoginLogoHouse {
         width: auto;
-        height: 300px;
+        height: auto;
         transform: translateY(150px);
     }
 
 
     .desktop .right-side .bottom{
         height:35vh;
-        padding-left: 30%;
+        padding-left: 20%;
     }
     .desktop .right-side .bottom button{
-        width: 70%;
+        width: 375px;
         height: 5vh;
         background: rgb(3, 183, 3);
         border-radius: 5px;

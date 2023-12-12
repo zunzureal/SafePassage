@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body {
+    font-family: Poppins,sans-serif;
+    }
+    .grab-mobile{
+        display: none;
+    }
+
+    .grab-container{
+        display: flex;
+        width: 100%;
+        height: 100vh; 
+    } 
+    .grab-logo{
+        height: 93px;
+        width: 177px;
+        margin-left: 10%;
+    }
+
+    .leftsideG{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+    }
+
+    .imagegrab{
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    .imagegrab img{
+        margin-left: 15%;
+    }
+
+
+    .qrcodeG{
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        border: solid 0.5px black;
+        transform: translateX(70%);
+        margin-bottom: 20px;
+        margin-top: 18%;
+    }
+    
+    .rightsideG{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 25px;
+        width: 50%;
+
+    }
+
+    .signupG{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signupG p{
+        margin-top: 10%;
+        font-size: 50px;
+        color: #17c964;
+        margin-left: 10%;
+    }
+
+    .formerG{
+        height: 100%;
+        border-bottom-left-radius: 30px;
+    }
+
+    .formmargin{
+        margin-top: 7%;
+    }
+    
+    .formerG input{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6.2%;
+        margin-left: 10%;
+        padding-left: 1%;
+        height: 50px;
+        width: 500px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+    }
+
+    .formerG select {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5%;
+        padding-left: 0.5%;
+        margin-top: 6.2%;
+        margin-left: 10%;
+        height: 50px;
+        width: 500px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+        color: #6b6767;
+    }
+
+    .formerG select option{
+        border: #17c964 solid 2px;
+    }
+
+    .summit2{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 9%;
+    }
+
+    .summit2 button{
+        border-radius: 20px;
+        height: 50px;
+        width: 500px;
+        background-color: #17c964;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .summit2 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+@media  screen and (max-width: 768px){
+    .grab-container{
+        display: none;
+    }
+    .grab-mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .grab-bar-mobile{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+    }
+    .grab-bar-mobile p{
+        color: #17c964;
+        margin-left: 12%;
+        margin-top: 15%;
+        font-weight: 1000;
+    }
+    .grab-logo-moblie {
+        width: 200px;
+        height: 150px;
+    }
+    .grab-qr-mobile{
+        height: 450px;
+    }
+    .qrcodeG{
+        margin-left: -14%;
+        width: 200px;
+        height: 200px;
+        margin-top: -5%;
+    }
+    .imagegrab{
+        width: 300px;
+        height: 300px;
+        margin-left: -3%;
+        margin-top: -10%;
+    }
+    .formerG-mobile{
+        /*height: 100%;*/
+        margin-top: -65%;
+    }
+    .formerG-mobile input{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6%;
+        margin-left: 8%;
+        padding-left: 1%;
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+    }
+    .formerG-mobile select {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5%;
+        padding-left: 0.5%;
+        margin-top: 6%;
+        margin-left: 8%;
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+        color: #514e4e;
+    }
+
+    .formerG-mobile select option{
+        border: #17c964 solid 2px;
+    }
+
+    .summit2{
+        margin-top: 0%;
+        margin-left: 6%;
+    }
+
+    .summit2 button{
+        border-radius: 20px;
+        height: 40px;
+        width: 300px;
+        background-color: #17c964;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .summit2 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+}

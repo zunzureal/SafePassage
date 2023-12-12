@@ -1,0 +1,379 @@
+@media screen and (min-width:768px) {
+    .profile-mobile{
+        display: none;
+    }
+    .profile-desktop{
+        display: flex;
+       
+       
+        height: 100vh;
+    }
+    
+    .profile-desktop .left-side2{
+        background-color: #ffffff;
+        width: 50%;
+        height: 100vh;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-left: 7%;
+        transform: translateX(-50px);
+    }
+    .profile-desktop .item-right{
+        background-color: white;
+        width: 50%;
+        height: 100vh;
+        transform: translateX(-90px);
+    }
+    .profile-desktop .item-right .feed{
+    
+        width: 805px;
+        height: 35vh;
+        padding-top: 50px;
+    }
+    
+    .profile-desktop .item-right .bottom{
+        margin-top: 20vh;
+        height: 45vh;
+    }
+    
+    .profile-desktop .item-right .heads{
+        padding-top: 5vh;
+        height: 20vh;
+    }
+    
+    .profile-desktop .item-right .heads .welcome {
+        display: flex;
+        width: 650px;
+        color: rgb(255, 255, 255);
+        padding-left: 250px;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: #17C964;
+        margin-left: 140px;
+        margin-top: 50px;
+    }
+    
+    
+    .profile-desktop .item-right .feed .visitors {
+        display: flex;
+        width: 650px;
+        color: #888d8a;
+        padding-left: 250px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        background-color: #ffffff;
+        margin-left: 140px;
+        margin-top: 20px;
+    }
+    
+    .profile-desktop .item-right .feed .delivery {
+        display: flex;
+        width: 650px;
+        color: #888d8a;
+        padding-left: 250px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        background-color: #ffffff;
+        margin-left: 140px;
+        margin-top: 20px;
+    }
+    
+    .profile-desktop .item-right .feed .house {
+        display: flex;
+        width: 650px;
+        color: #888d8a;
+        padding-left: 250px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        background-color: #ffffff;
+        margin-left: 140px;
+        margin-top: 20px;
+    }
+    
+    
+    
+    .profile-desktop .item-right .heads .block .profile{
+        width: 30%;
+    }
+    
+    .profilepicture{
+        height: 50px;
+        width: 50px;
+        transform: translateX(-25px);
+        
+        
+    }
+    
+    
+    .item-right .bottom .block {
+        display: flex;
+        width: 1000px;
+        border: 1px rgb(187, 255, 0) solid;
+    }
+    
+    .profile-desktop .item-right .bottom {
+        display: flex;
+        width: 650px;
+        height: 8vh;
+        margin-top: 170px;
+        color: rgb(255, 255, 255);
+        padding-left: 270px;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color:red;
+        margin-left: 140px;
+    }
+    
+    .feed .visitors .header-btn-create{
+        margin-top: 0px;
+        margin-left: 120px;
+        font-size: 20px;
+    }
+    
+    .VisitorsPic {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .feed .visitors .visitors-img{
+        margin-top: 20px;
+        margin-left: -160px;
+        
+    }
+    
+    .feed .delivery .delivery-img{
+        margin-top: 20px;
+        margin-left: -160px;
+    }
+    
+    .feed .house .house-img{
+        margin-top: 20px;
+        margin-left: -160px;
+    }
+    
+    .feed .delivery .header-btn-create{
+        margin-top: 0px;
+        margin-left: 120px;
+        font-size: 20px;
+    }
+    
+    .feed .house .header-btn-create{
+        margin-top: 0px;
+        margin-left: 120px;
+        font-size: 20px;
+    }
+    
+    .bottom .header-btn-create{
+        margin-top: 0px;
+        margin-left: 40px;
+        font-size: 20px;
+       
+    }
+    
+    .heads .welcome {
+        margin-right: 10px;
+        margin-top: 10px;
+     
+    }
+    
+    .heads .welcome .land {
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    .heads .welcome .profile{
+        margin-top: 25px;
+    }
+    
+    
+    .heads .welcome .land .ben {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    
+    .item-right .heads .welcome .profile{
+        margin-left: -130px;
+    }
+    
+    .feed .visitors .triangle-img{
+        margin-left: -120px;
+        margin-top: 25px;
+    } 
+    
+    .feed .delivery .triangle-img{
+        margin-left: -130px;
+        margin-top: 25px;
+    } 
+    
+    .feed .house .triangle-img{
+        margin-left: -120px;
+        margin-top: 25px;
+    } 
+}
+
+@media screen and (max-width:768px) {
+    .profile-desktop{
+        display: none;
+    }
+    .profile-mobile {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .profile-mobile .top{
+       height: 5vh;
+        display: flex;
+    }
+
+    .profile-mobile .middle{
+        height: 25vh;
+    }
+
+    .profile-mobile .bottom{
+       height: 70vh;
+    }
+
+    .profile-mobile .middle .house-img{
+        margin-bottom: 100px;
+    }
+
+    .profile-mobile .bottom .profile-img{
+        margin-left: 50px;
+        margin-top: 8px;
+    }
+
+    .profile-mobile .bottom .visitors-img{
+        margin-left: 50px;
+        margin-top: 8px;
+    }
+
+    .profile-mobile .bottom .delivery-img{
+        margin-left: 45px;
+        margin-top: 8px;
+    }
+
+    .profile-mobile .bottom .house-img{
+        margin-left: 50px;
+        margin-top: 8px;
+    }
+
+    .profile-mobile .bottom .welcome{
+        border-radius: 20px;
+        background-color: #17C964;
+        width: 300px;
+        margin-left: 40px;
+        height: 70px;
+        margin-top: 30px;
+    }
+
+    .profile-mobile .bottom .visitors{
+        border-radius: 20px;
+        background-color: #ffffff;
+        width: 300px;
+        margin-left: 40px;
+        height: 70px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .profile-mobile .bottom .delivery{
+        border-radius: 20px;
+        background-color: #ffffff;
+        width: 300px;
+        margin-left: 40px;
+        height: 70px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .profile-mobile .bottom .house{
+        border-radius: 20px;
+        background-color: #ffffff;
+        width: 300px;
+        margin-left: 40px;
+        height: 70px;
+        border: 3px #17C964 solid;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .profile-mobile .bottom .logout{
+        border-radius: 20px;
+        background-color:red;
+        width: 300px;
+        margin-left: 40px;
+        height: 70px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .profile-mobile .bottom .logout .logout-create{
+        font-size: 20px;
+        color: #ffffff;
+       margin-left: 120px;
+       margin-top: 20px;
+    }
+
+    .profile-mobile .bottom .visitors-create{
+        font-size: 20px;
+        color: #888d8a;
+        margin-top: -60px;
+        padding-left: 70px;
+    }
+
+    .profile-mobile .bottom .delivery-create{
+        font-size: 20px;
+        color: #888d8a;
+        margin-top: -60px;
+        padding-left: 80px;
+    }
+
+    .profile-mobile .bottom .house-create{
+        font-size: 20px;
+        color: #888d8a;
+        margin-top: -60px;
+        padding-left: 70px;
+    }
+
+    .profile-mobile .bottom .welcome .land .ben{
+        color: #ffffff;
+        margin-top: -60px;
+        padding-left: 70px;
+    }
+
+    .profile-mobile .bottom .welcome  .profile-img .land .mith{
+        color: #ffffff;
+        margin-left: 70px;
+     
+        
+    }
+
+
+
+    .profile-mobile .bottom .visitors .triangle-img{
+        margin-top: -25px;
+        margin-left: -30px;
+        
+    }
+
+    .profile-mobile .bottom .delivery .triangle-img{
+        margin-top: -25px;
+        margin-left: -30px;
+        
+    }
+
+    .profile-mobile .bottom .house .triangle-img{
+        margin-top: -25px;
+        margin-left: -30px;
+        
+    }
+
+    .profile-mobile .right {
+        padding-top: 40px; 
+        color: #17C964;
+        padding-left: 130px;
+    }
+}

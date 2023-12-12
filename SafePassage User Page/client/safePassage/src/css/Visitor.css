@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body {
+    font-family: Poppins,sans-serif;
+    }
+
+    .visitor-mobile{
+        display: none;
+    }
+    
+    .visitor-container{
+        display: flex;
+        width: 100%;    
+        height: 100vh; 
+    }
+
+    .leftsideV{
+        justify-content: center;
+        align-content: center;
+        width: 50%;
+        height: 100%;
+    }
+    .visitor-logo{
+        height: 93px;
+        width: 177px;
+        margin-left: 10%;
+    }
+    .imagevisitor{
+        width: 600px;
+        height: 500px;
+        margin-top: 5%;
+        margin-left: 20%;
+    }
+
+    .qrcodeV{
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        border: solid 0.5px black;
+        margin-bottom: 20px;
+        margin-top: 15%;
+        margin-left: 40%;
+    }
+    
+    .rightsideV{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        border-radius: 25px;
+    }
+
+    .formerV{
+        height: 100%;
+        border-bottom-left-radius: 30px;
+        margin-top: 10%;
+    }
+
+    .formerV input{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6.2%;
+        padding-left: 1%;
+        transform: translateX(30%);
+        height: 50px;
+        width: 450px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+    }
+
+    .summit1{
+        margin-left: 22%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        transform: translateX(-6%);
+    }
+
+    .summit1 button{
+        border-radius: 20px;
+        height: 50px;
+        width: 450px;
+        background-color: #17c964;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .summit1 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+@media screen and (max-width: 768px){
+    .visitor-container{
+        display: none;
+    }
+    .visitor-mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .visitor-bar-mobile{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+    }
+    .visitor-bar-mobile p{
+        color: #17c964;
+        margin-left: 12%;
+        margin-top: 15%;
+        font-weight: 1000;
+    }
+    .visitor-logo-moblie {
+        width: 200px;
+        height: 150px;
+    }
+    .visitor-qr-mobile{
+        height: 450px;
+    }
+    .qrcodeV{
+        margin-left: 20%;
+        width: 200px;
+        height: 200px;
+        margin-top: -5%;
+    }
+    .imagevisitor{
+        width: 300px;
+        height: 300px;
+        margin-left: 8%;
+        margin-top: -10%;
+    }
+    .formerV-mobile{
+        /*height: 100%;*/
+        margin-top: -65%;
+    }
+    .formerV-mobile input{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6%;
+        margin-left: 8%;
+        padding-left: 1%;
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+        border: #17c964 solid 2px;
+    }
+    .summit1{
+        margin-top: 0%;
+        margin-left: 11%;
+    }
+
+    .summit1 button{
+        border-radius: 20px;
+        height: 40px;
+        width: 300px;
+        background-color: #17c964;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .summit1 button span{
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+    
+}

@@ -1,0 +1,41 @@
+input,button{
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+@media screen  {
+    
+}
+
+.login-container{
+    width: 100%;
+    height: 100vh;
+    color: aliceblue;
+    font-size: 1.5em;
+    display: flex;
+    column-gap: 5%;
+    justify-content: center;
+    background-image: url(https://media.istockphoto.com/id/865457032/vector/abstract-futuristic-cyberspace-with-binary-code-matrix-background-with-digits-well-organized.jpg?s=612x612&w=0&k=20&c=IQcdedY8fn_DMq6nwc5MaHUBe0H0d5DPyibHR8J2usk=);
+}
+
+.right-side{
+    width: 30%;
+    height: 300px;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.right-side input{
+    color: #000;
+}
+.right-side input::placeholder{
+    text-align: center;
+}
+
+
+.form-card{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,134 @@
+.House-mobile{
+    display: none;
+}
+.House-container{
+    display: flex;
+    width: 100%;    
+    height: 100vh;  
+}
+
+.leftsideH{
+    width: 50%;
+    height: 100%;
+}
+
+.houseOwner-logo{
+    height: 93px;
+    width: 177px;
+    margin-left: 10%;
+}
+.textsignH p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+    transform: translateY(10%);
+}
+
+
+.imageHouse{
+    margin-left: 35%;
+    margin-top: 15%;
+    height: 300px;
+    width: 300px;
+}
+
+
+.qrcodeH{
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 300px;
+    border: solid 0.5px black;
+    transform: translateX(70%);
+    height: 300px;
+    background-color: rgb(124, 128, 128);
+}
+
+.rightsideH{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+.formerH{
+    background-color: white;
+    height: 100%;
+}
+
+.summit3{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 36%;
+    margin-bottom: 5%;
+}
+
+.summit3 button{
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+    background-color: #17c964;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.summit3 button span{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+    .House-container{
+        display : none;
+    }
+    .House-mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .house-bar-mobile{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+    }
+    .house-bar-mobile p{
+        color: #17c964;
+        margin-left: 10%;
+        margin-top: 15%;
+        font-weight: 1000;
+    }
+    .houseOwner-logo-moblie {
+        width: 200px;
+        height: 150px;
+    }
+    .house-qr-mobile{
+        height: 450px;
+    }
+    .qrcodeH{
+        margin-left: -37%;
+        width: 300px;
+        height: 300px;
+        margin-top: 30%;
+    }
+    .imageHouse{
+        width: 250px;
+        height: 500px;
+        margin-left: 18%;
+        margin-top: 30%;
+    }
+    .summit3{
+        text-align: center;
+        margin-left: -3%;
+        height: 315px;
+        margin-top: 10%;
+    }
+    .summit3 button{
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+    }
+}

@@ -32,7 +32,7 @@ function GrabDeliver() {
   }, [])
   const submitBtn = async (e) => {
     e.preventDefault();
-      if(licenseTemplate==='' || selectedOption ==='' ||deliveryID==='' ||houseNo ===''){
+      if(licenseTemplate===''  ||deliveryID==='' ||houseNo ===''){
         Swal.fire({
           icon:"error",
           title:"Please, fill in data!",
@@ -42,7 +42,7 @@ function GrabDeliver() {
       } else{
         if (customOption != '') {
           await axios.post('http://localhost:4444/grabGenQr',{
-            deliveryID,houseNo,licenseTemplate,customOption,
+            deliveryID,houseNo,licenseTemplate, selectedOption:customOption,
           }).then(res=>{
             setImage(res.data)
             setIsQrCodeVisibleG(true)
@@ -54,7 +54,7 @@ function GrabDeliver() {
               setImage(res.data)
               setIsQrCodeVisibleG(true)
             })
-          } else {
+          } else if(customOption==='' && selectedOption ==='') {
             Swal.fire({
               icon: 'error',
               title: 'ERROR',

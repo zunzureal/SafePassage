@@ -112,7 +112,7 @@ function Profile() {
                         <img src={logo} alt="" width="190px" height="190px" />
                     </div>
                     <div className="right">
-                        PROFILE
+                        
                     </div>
 
 
